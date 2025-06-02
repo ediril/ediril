@@ -9,12 +9,13 @@ record_visit();
 	<title>EMRAH DIRIL</title>
 	<meta name="robots" content="noarchive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<style>
 		body {
 			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 			background-color: #0a0a0a;
 			color: #e6c08a;
-			line-height: 1.6;
+			line-height: 1.4;
 			margin: 0;
 			padding: 0;
 		}
@@ -27,11 +28,32 @@ record_visit();
 		}
 
 		h1 {
-			margin-bottom: 50px;
 			font-size: 3.5rem;
 			color: #e6c08a;
 			font-weight: 600;
 			font-variant: small-caps;
+			margin: 0;
+			line-height: 1;
+		}
+
+		.social-links {
+			display: flex;
+			gap: 8px;
+			margin-bottom: 50px;
+			display: flex;
+			align-items: flex-end;
+		}
+
+		.social-links a {
+			font-size: 1.5rem;
+			text-decoration: none;
+			display: inline-block;
+			transition: transform 0.2s ease;
+		}
+
+		.social-links a:hover {
+			transform: scale(1.2);
+			text-decoration: none;
 		}
 
 		h2 {
@@ -105,7 +127,6 @@ record_visit();
 
 			h1 {
 				font-size: 2.2rem;
-				margin-bottom: 30px;
 			}
 
 			h2 {
@@ -160,13 +181,18 @@ record_visit();
 
 <div class="container">
 	<h1><a href="https://emrahdiril.com">Emrah Diril</a></h1>
+	<div class="social-links">
+		<a href="http://x.com/emrahdx" title="X (Twitter)">𝕏</a>
+		<a href="http://linkedin.com/in/ediril" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+		<a href="http://github.com/ediril" title="GitHub"><i class="fab fa-github"></i></a>
+	</div>
 
 	<h2><ul>
 		<li><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
 			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
 		</li>
 		<li><a href="https://banalytiq.com">Banalytiq</a>
-			<p>A very <s>simple</s> banal self-hosted web analytics library built on sqlite and geolite2</p>
+			<p>A very <s>simple</s> banal server-side web analytics library built on sqlite and geolite2</p>
 		</li>
 		<li><a href="https://reddswan.com">ReddSwan</a>
 			<p>A new AI-augmented email client with a fresh take on UI/UX. Get the most out of your emails</p>
@@ -185,9 +211,6 @@ record_visit();
 	<footer class="footer">
 		<img src="_img/emrah.jpg" class="footer-img">
 		<p style="margin-bottom: 4px;">Sometimes I believe as many as six impossible things before breakfast</p>
-		<a href="http://x.com/emrahdx">[X]</a>
-		<a href="http://linkedin.com/in/ediril">[LinkedIn]</a>
-		<a href="http://github.com/ediril">[Github]</a>
 	</footer>
 </div>		
 
