@@ -1,0 +1,53 @@
+{
+    "editor": {
+      "formatOnSave": true,
+      "tabSize": 4,
+      "insertSpaces": true,
+      "rulers": [88],
+      "wordWrap": "off"
+    },
+    "python": {
+      "formatting": {
+        "provider": "black",
+        "lineLength": 88
+      },
+      "linting": {
+        "enabled": true,
+        "pylintEnabled": true,
+        "flake8Enabled": true
+      }
+    },
+    "files": {
+      "exclude": {
+        "**/__pycache__": true,
+        "**/.git": true,
+        "**/venv": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/*.pyd": true,
+        "**/*.so": true,
+        "**/*.dylib": true,
+        "**/*.dll": true,
+        "**/*.db": true,
+        "**/*.sqlite3": true
+      },
+      "watcherExclude": {
+        "**/__pycache__/**": true,
+        "**/venv/**": true,
+        "**/.git/**": true,
+        "**/.mypy_cache/**": true,
+        "**/.pytest_cache/**": true
+      }
+    },
+    "search": {
+      "exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/venv": true,
+        "**/__pycache__": true
+      }
+    }
+  }
