@@ -188,6 +188,9 @@ record_visit();
 	</div>
 
 	<h2><ul>
+		<li><a href="https://founderfodder.com">FounderFodder</a>
+			<p>Inspiration for founders, makers and tinkerers</p>
+		</li>
 		<li><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
 			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
 		</li>
@@ -196,9 +199,6 @@ record_visit();
 		</li>
 		<li><a href="https://reddswan.com">ReddSwan</a>
 			<p>A new AI-augmented email client with a fresh take on UI/UX. Get the most out of your emails</p>
-		</li>
-		<li><a href="https://founderfodder.com">FounderFodder</a>
-			<p>Inspiration for founders, makers and tinkerers</p>
 		</li>
 		<li><img src="_img/instagram.svg" alt="Instagram" width="24"><a href="https://instagram.com/emrahdiril">@emrahdiril</a>
 			<p>Piano covers and digital pencil drawings</p>
