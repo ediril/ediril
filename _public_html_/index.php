@@ -201,10 +201,11 @@ record_visit();
 			<p>A new AI-augmented email client with a fresh take on UI/UX. Get the most out of your emails</p>
 		</li>
 		<li><img src="_img/instagram.svg" alt="Instagram" width="24"><a href="https://instagram.com/dream_vistas.art">@dream_vistas.art</a>
-			<p>Surrealist dream-like art inspired by nature and psychotropia</p>
+			<p>"The Dreamtress creates surreal, natured-inspired dreams infused with psychotropic wonder for all"</p>
+			<p>-- Surrealist dream-like art inspired by nature and psychotropia</p>
 		</li>
 		<li><img src="_img/instagram.svg" alt="Instagram" width="24"><a href="https://instagram.com/emrahdiril">@emrahdiril</a>
-			<p>Personal account where I share piano covers and digital pencil drawings</p>
+			<p>Piano covers and digital drawings</p>
 		</li>
 	</ul></h2>
 
