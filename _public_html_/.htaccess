@@ -1,12 +1,12 @@
 Options -Indexes
 
-SetEnvIfNoCase User-Agent ".*(Linux x86_64|Ubuntu|Windows NT 5).*" deny_user
-SetEnvIfNoCase User-Agent ".*(Sogou|Moreover|Nimbostratus|Baiduspider|domaincrawler).*" deny_user
-BrowserMatchNoCase ".*(?<!ro|\/|google|yandex|yandexmobile|bing|apple)(bot).*" deny_user
+# SetEnvIfNoCase User-Agent ".*(Linux x86_64|Ubuntu|Windows NT 5).*" deny_user
+# SetEnvIfNoCase User-Agent ".*(Sogou|Moreover|Nimbostratus|Baiduspider|domaincrawler).*" deny_user
+# BrowserMatchNoCase ".*(?<!ro|\/|google|yandex|yandexmobile|bing|apple)(bot).*" deny_user
 
-order allow,deny
-deny from env=deny_user
-allow from all
+# order allow,deny
+# deny from env=deny_user
+# allow from all
 
 RewriteEngine On
 
