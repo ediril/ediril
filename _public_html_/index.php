@@ -182,7 +182,7 @@ record_visit();
 <div class="container">
 	<h1><a href="https://emrahdiril.com">Emrah Diril</a></h1>
 	<div class="social-links">
-		<a href="http://x.com/emrahdx" title="X (Twitter)">𝕏</a>
+		<a href="http://x.com/emrahdma" title="X (Twitter)">𝕏</a>
 		<a href="http://linkedin.com/in/ediril" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 		<a href="http://github.com/ediril" title="GitHub"><i class="fab fa-github"></i></a>
 	</div>
@@ -194,8 +194,11 @@ record_visit();
 		<li><a href="https://reddswan.com">ReddSwan</a>
 			<p>A new AI-augmented email client with a fresh take on UI/UX. Get the most out of your emails</p>
 		</li>
+		<li><a href="https://emrahdiril.com/chatgpt2pdf">ChatGPT Conversation Exporter</a>
+			<p>Save and print your ChatGPT conversations as clean PDFs</p>
+		</li>
 		<li><a href="https://banalytiq.com">Banalytiq</a>
-			<p>The simplest, most banal yet sufficient server-side alternative to Google Analytics</p>
+			<p>A simple yet sufficient server-side analytics library</p>
 		</li>
 		<li><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
 			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
