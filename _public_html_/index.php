@@ -188,7 +188,10 @@ record_visit();
 	</div>
 
 	<h2><ul>
-		<li><a href="https://founderfodder.com">FounderFodder</a>
+		<li><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
+			<p>A curated list of binge-worthy shows on YouTube</p>
+		</li>
+        <li><a href="https://founderfodder.com">FounderFodder</a>
 			<p>Inspiration for founders, makers and tinkerers</p>
 		</li>
 		<li><a href="https://reddswan.com">ReddSwan</a>
