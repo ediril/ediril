@@ -185,17 +185,18 @@ record_visit();
 		<a href="http://x.com/emrahdma" title="X (Twitter)">𝕏</a>
 		<a href="http://linkedin.com/in/ediril" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 		<a href="http://github.com/ediril" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com/emrahdiril" title="Instagram"><i class="fab fa-instagram"></i></a>
 	</div>
 
 	<h2><ul>
-		<li><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
+        <li><a href="https://artlovershub.com">Art Lovers Hub</a>
+			<p>Showcasing beautiful art and creative moments</p>
+		</li>
+        <li><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
 			<p>A curated list of binge-worthy shows on YouTube</p>
 		</li>
         <li><a href="https://founderfodder.com">FounderFodder</a>
 			<p>Inspiration for founders, makers and tinkerers</p>
-		</li>
-		<li><a href="https://reddswan.com">ReddSwan</a>
-			<p>A new AI-augmented email client with a fresh take on UI/UX. Get the most out of your emails</p>
 		</li>
 		<li><a href="https://emrahdiril.com/chatgpt2pdf">ChatGPT Conversation Exporter</a>
 			<p>Save and print your ChatGPT conversations as clean PDFs</p>
@@ -206,13 +207,17 @@ record_visit();
 		<li><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
 			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
 		</li>
-		<li><img src="_img/instagram.svg" alt="Instagram" width="24"><a href="https://instagram.com/dream_vistas.art">@dream_vistas.art</a>
+		<li><i class="fab fa-instagram"></i> <a href="https://instagram.com/dream_vistas.art"> dream_vistas.art</a>
 			<p>"The Dreamtress creates surreal, natured-inspired dreams infused with psychotropic wonder for all"</p>
 			<p>-- Surrealist dream-like art inspired by nature and psychotropia</p>
 		</li>
-		<li><img src="_img/instagram.svg" alt="Instagram" width="24"><a href="https://instagram.com/emrahdiril">@emrahdiril</a>
-			<p>Piano covers and digital drawings</p>
+        <li><a href="https://reddswan.com">ReddSwan</a>
+			<p>Pros don't use GMail</p>
 		</li>
+        <li>Traqen</a>
+			<p>Track anything</p>
+		</li>
+
 	</ul></h2>
 
 	<footer class="footer">
