@@ -61,6 +61,7 @@ record_visit();
 			color: #e6c08a;
 			font-weight: 500;
 			text-shadow: 0 0 20px rgba(230, 192, 138, 0.6);
+            margin: 0;
 		}
 
 		ul {
@@ -69,7 +70,7 @@ record_visit();
 		}
 
 		li {
-			margin-bottom: 30px;
+			margin-bottom: 16px;
 		}
 
 		li p {
@@ -134,7 +135,7 @@ record_visit();
 			}
 
 			li {
-				margin-bottom: 25px;
+				margin-bottom: 18px;
 			}
 
 			li p {
@@ -188,11 +189,12 @@ record_visit();
         <a href="https://instagram.com/emrahdiril" title="Instagram"><i class="fab fa-instagram"></i></a>
 	</div>
 
-	<h2><ul>
+	<h2>
+        <ul>
         <li><a href="https://artlovershub.com">Art Lovers Hub</a>
 			<p>Showcasing beautiful art and creative moments</p>
 		</li>
-        <li><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
+        <li><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a> <a href="https://github.com/ediril/binge-worthy-public"><i class="fab fa-github"></i></a>
 			<p>A curated list of binge-worthy shows on YouTube</p>
 		</li>
         <li><a href="https://founderfodder.com">FounderFodder</a>
@@ -201,7 +203,7 @@ record_visit();
 		<li><a href="https://emrahdiril.com/chatgpt2pdf">ChatGPT Conversation Exporter</a>
 			<p>Save and print your ChatGPT conversations as clean PDFs</p>
 		</li>
-		<li><a href="https://banalytiq.com">Banalytiq</a>
+		<li><a href="https://banalytiq.com">Banalytiq</a> <a href="https://github.com/ediril/banalytiq"><i class="fab fa-github"></i></a>
 			<p>A simple yet sufficient server-side analytics library</p>
 		</li>
 		<li><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
@@ -217,8 +219,8 @@ record_visit();
         <li>Traqen</a>
 			<p>Track anything</p>
 		</li>
-
 	</ul></h2>
+    <br>
 
 	<footer class="footer">
 		<img src="_img/emrah.jpg" class="footer-img">
