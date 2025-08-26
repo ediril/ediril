@@ -9,7 +9,7 @@ record_visit();
 	<title>EMRAH DIRIL</title>
 	<meta name="robots" content="noarchive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="canonical" href="https://emrahdiril.com" />
 	<style>
 		body {
@@ -188,9 +188,11 @@ record_visit();
 		<a href="http://linkedin.com/in/ediril" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 		<a href="http://github.com/ediril" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://instagram.com/emrahdiril" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://emrahdiril.com/notes" title="My Notes"><i class="fa fa-file"></i></a>
 	</div>
 
-	<h2>
+	<h2>PROJECTS</h2>
+    <h3>
         <ul>
         <li><a href="https://artlovershub.com">Art Lovers Hub</a>
 			<p>Showcasing beautiful art and creative moments</p>
@@ -220,8 +222,7 @@ record_visit();
         <li>Traqen</a>
 			<p>Track anything</p>
 		</li>
-	</ul></h2>
-    <br>
+	</ul></h3>
 
 	<footer class="footer">
 		<img src="_img/emrah.jpg" class="footer-img">
