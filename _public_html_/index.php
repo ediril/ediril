@@ -194,32 +194,39 @@ record_visit();
 	<h2>PROJECTS</h2>
     <h3>
         <ul>
-        <li><a href="https://artlovershub.com">Art Lovers Hub</a>
-			<p>Showcasing beautiful art and creative moments</p>
+        <li id="notemodo"><a href="https://notemodo.com">Notemodo</a>
+			<p>From Apple Notes to blog posts</p>
 		</li>
-        <li><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a> <a href="https://github.com/ediril/binge-worthy-public"><i class="fab fa-github"></i></a>
+        <li id="binge-worthy-shows"><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
+            <a href="https://github.com/ediril/binge-worthy-public"><i class="fab fa-github"></i></a>
 			<p>A curated list of binge-worthy shows on YouTube</p>
 		</li>
-        <li><a href="https://founderfodder.com">FounderFodder</a>
+        <li id="founderfodder"><a href="https://founderfodder.com">FounderFodder</a>
 			<p>Inspiration for founders, makers and tinkerers</p>
 		</li>
-		<li><a href="https://emrahdiril.com/chatgpt2pdf">ChatGPT Conversation Exporter</a>
+		<li id="chatgpt-conversation-exporter"><a href="https://emrahdiril.com/chatgpt2pdf">ChatGPT Conversation Exporter</a>
 			<p>Save and print your ChatGPT conversations as clean PDFs</p>
 		</li>
-		<li><a href="https://banalytiq.com">Banalytiq</a> <a href="https://github.com/ediril/banalytiq"><i class="fab fa-github"></i></a>
-			<p>A simple yet sufficient server-side analytics library</p>
-		</li>
-		<li><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
-			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
-		</li>
-		<li><i class="fab fa-instagram"></i> <a href="https://instagram.com/dream_vistas.art"> dream_vistas.art</a>
-			<p>"The Dreamtress creates surreal, natured-inspired dreams infused with psychotropic wonder for all"</p>
+        <li id="dream-vistas-art"><a href="https://dreamvistas.art">Dream Vistas Art</a> <a href="https://instagram.com/dream_vistas.art"><i class="fab fa-instagram"></i></a>
+			<p>The Dreamstress weaves surreal, natured-inspired dreams infused with psychotropic wonder for all</p>
 			<p>-- Surrealist dream-like art inspired by nature and psychotropia</p>
 		</li>
-        <li><a href="https://reddswan.com">ReddSwan</a>
+		<li id="scrubbler"><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
+			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
+		</li>
+		<li id="banalytiq"><a href="https://banalytiq.com">Banalytiq</a> <a href="https://github.com/ediril/banalytiq"><i class="fab fa-github"></i></a>
+			<p>A simple yet sufficient server-side analytics library</p>
+		</li>
+		<li id="collectiq"><a href="https://github.com/ediril/collectiq">Collectiq</a>
+			<p>Email address collection component</p>
+		</li>
+        <li id="reddswan"><a href="https://reddswan.com">ReddSwan</a>
 			<p>Pros don't use GMail</p>
 		</li>
-        <li>Traqen</a>
+        <li id="doshmodo"><a href="#">Doshmodo</a>
+            <p>Find your way of money</p>
+		</li>
+        <li id="traqen"><a href="#">Traqen</a>
 			<p>Track anything</p>
 		</li>
 	</ul></h3>
