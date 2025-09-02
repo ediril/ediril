@@ -197,6 +197,9 @@ record_visit();
         <li id="notemodo"><a href="https://notemodo.com">Notemodo</a>
 			<p>From Apple Notes to blog posts</p>
 		</li>
+        <li id="doshmodo"><a href="https://doshmodo.com">Doshmodo</a>
+            <p>Find your way of money</p>
+		</li>
         <li id="binge-worthy-shows"><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
             <a href="https://github.com/ediril/binge-worthy-public"><i class="fab fa-github"></i></a>
 			<p>A curated list of binge-worthy shows on YouTube</p>
@@ -222,9 +225,6 @@ record_visit();
 		</li>
         <li id="reddswan"><a href="https://reddswan.com">ReddSwan</a>
 			<p>Pros don't use GMail</p>
-		</li>
-        <li id="doshmodo"><a href="#">Doshmodo</a>
-            <p>Find your way of money</p>
 		</li>
         <li id="traqen"><a href="#">Traqen</a>
 			<p>Track anything</p>
