@@ -1,8 +1,9 @@
 ### Hi there 👋
 
-Feel free to reach out if you would like to chat about the following: 
+Not looking for a new job, please don't bother (I'll ignore it). If you have money to invest, let's talk!
 
-> Distributed systems, multithreaded applications, backend programming, real-time systems, databases, data warehouses, data pipelines
+Also feel free to contact me about distributed systems, data pipelines, AI systems, software engineering and architecture
+
 
 [![Linkedin Badge](https://img.shields.io/badge/-emrahdiril-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ediril/)](https://www.linkedin.com/in/ediril/)\
 [![X Badge](https://img.shields.io/badge/emrahdma-blue?style=flat-square&logo=X&logoColor=white&link=https://x.com/emrahdma)](https://x.com/emrahdma)\
