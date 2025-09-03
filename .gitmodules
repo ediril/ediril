@@ -1,3 +1,6 @@
 [submodule "_public_html_/_banalytiq"]
 	path = _public_html_/_banalytiq
 	url = https://github.com/ediril/banalytiq.git
+[submodule "_public_html_/collectiq"]
+	path = _public_html_/collectiq
+	url = https://github.com/ediril/collectiq.git
