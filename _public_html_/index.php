@@ -1,5 +1,5 @@
 <?php
-require_once 'collectiq/component/WaitlistComponent.php';
+require_once '_collectiq/component/WaitlistComponent.php';
 require_once __DIR__ . '/_banalytiq/banalytiq.php';
 record_visit();
 ?>
@@ -13,7 +13,7 @@ record_visit();
     <link rel="canonical" href="https://emrahdiril.com" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <?php $waitlist = new WaitlistComponent(); echo $waitlist->renderStyles(); ?>
+    <?php $waitlist = new WaitlistComponent('_collectiq'); echo $waitlist->renderStyles(); ?>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
