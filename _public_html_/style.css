@@ -7,7 +7,7 @@ body {
 
 /* Custom container max-width */
 .container {
-	max-width: 800px;
+	max-width: 860px;
 }
 
 /* Typography */
@@ -49,6 +49,10 @@ h2 {
 /* Project list items */
 li {
 	margin-bottom: 16px;
+}
+
+li a {
+	font-size: 1.375rem;
 }
 
 li p {
@@ -130,6 +134,10 @@ footer p {
 		margin-bottom: 18px;
 	}
 
+	li a {
+		font-size: 1.25rem;
+	}
+
 	li p {
 		font-size: 1rem;
 	}
@@ -159,6 +167,10 @@ footer p {
 
 	h2 {
 		font-size: 1.3rem;
+	}
+
+	li a {
+		font-size: 1.1rem;
 	}
 
 	li p {
