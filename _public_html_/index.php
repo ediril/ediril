@@ -11,173 +11,7 @@ record_visit();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="canonical" href="https://emrahdiril.com" />
-	<style>
-		body {
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-			background-color: #0a0a0a;
-			color: #e6c08a;
-			line-height: 1.4;
-			margin: 0;
-			padding: 0;
-		}
-
-		.container {
-			margin: 36px auto 0 auto;
-			width: 800px;
-			max-width: 90%;
-			padding: 0 20px;
-		}
-
-		h1 {
-			font-size: 3.5rem;
-			color: #e6c08a;
-			font-weight: 600;
-			font-variant: small-caps;
-			margin: 0;
-			line-height: 1;
-		}
-
-		.social-links {
-			display: flex;
-			gap: 8px;
-			margin-bottom: 50px;
-			display: flex;
-			align-items: flex-end;
-		}
-
-		.social-links a {
-			font-size: 1.5rem;
-			text-decoration: none;
-			display: inline-block;
-			transition: transform 0.2s ease;
-		}
-
-		.social-links a:hover {
-			transform: scale(1.2);
-			text-decoration: none;
-		}
-
-		h2 {
-			font-size: 1.85rem;
-			color: #e6c08a;
-			font-weight: 500;
-			text-shadow: 0 0 20px rgba(230, 192, 138, 0.6);
-            margin: 0;
-		}
-
-		ul {
-			list-style-type: none;
-			padding: 0;
-		}
-
-		li {
-			margin-bottom: 16px;
-		}
-
-		li p {
-			margin: 0;
-			font-size: 1.1rem;
-			color: #9a8260;
-			font-weight: 400;
-		}
-
-		a {
-			color: #d4a574;
-			text-decoration: none;
-		}
-
-		a:hover {
-			color: #e6c08a;
-			text-decoration: underline;
-		}
-
-		footer {
-			text-align: center;
-			margin-top: 90px;
-			margin-bottom: 40px;
-		}
-
-		footer p {
-			color: #9a8260;
-		}
-
-		footer a {
-			color: #d4a574;
-			margin: 0 8px;
-			text-decoration: none;
-		}
-
-		footer a:hover {
-			color: #e6c08a;
-		}
-
-		.footer-img {
-			width:178px; 
-			height:178px; 
-			display: block; 
-			margin: 0 auto; 
-			border: 1px solid #999; 
-			border-radius: 6px;
-		}
-
-		/* Mobile styles */
-		@media (max-width: 768px) {
-			.container {
-				margin: 20px auto 0 auto;
-				padding: 0 15px;
-			}
-
-			h1 {
-				font-size: 2.2rem;
-			}
-
-			h2 {
-				font-size: 1.5rem;
-			}
-
-			li {
-				margin-bottom: 18px;
-			}
-
-			li p {
-				font-size: 1rem;
-			}
-
-			footer {
-				margin-top: 60px;
-				margin-bottom: 30px;
-			}
-
-			.footer-img {
-				width: 140px;
-				height: 140px;
-			}
-
-			footer a {
-				margin: 0 4px;
-				font-size: 0.9rem;
-			}
-		}
-
-		@media (max-width: 480px) {
-			h1 {
-				font-size: 1.8rem;
-			}
-
-			h2 {
-				font-size: 1.3rem;
-			}
-
-			li p {
-				font-size: 0.95rem;
-			}
-
-			.footer-img {
-				width: 120px;
-				height: 120px;
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -220,16 +54,26 @@ record_visit();
 		<li id="banalytiq"><a href="https://banalytiq.com">Banalytiq</a> <a href="https://github.com/ediril/banalytiq"><i class="fab fa-github"></i></a>
 			<p>A simple yet sufficient server-side analytics library</p>
 		</li>
-		<li id="collectiq"><a href="https://github.com/ediril/collectiq">Collectiq</a>
+		<li id="collectiq"><a href="https://github.com/ediril/collectiq">Collectiq</a> <a href="https://github.com/ediril/collectiq"><i class="fa fa-github"></i></a>
 			<p>Email address collection component</p>
 		</li>
         <li id="reddswan"><a href="https://reddswan.com">ReddSwan</a>
 			<p>Pros don't use GMail</p>
 		</li>
-        <li id="traqen"><a href="#">Traqen</a>
+        <li id="traqen"><a href="https://traqen.com">Traqen</a>
 			<p>Track anything</p>
 		</li>
 	</ul></h3>
+
+	<div class="email-form-wrapper">
+		<div class="email-form">
+			<h3>Get project updates and keep in touch</h3>
+			<form class="email-input-group" action="#" method="post">
+				<input type="email" class="email-input" placeholder="Enter your email" required>
+				<button type="submit" class="email-submit">Subscribe</button>
+			</form>
+		</div>
+	</div>
 
 	<footer class="footer">
 		<img src="_img/emrah.jpg" class="footer-img">
