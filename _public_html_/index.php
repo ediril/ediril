@@ -9,6 +9,7 @@ record_visit();
 	<title>EMRAH DIRIL</title>
 	<meta name="robots" content="noarchive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="canonical" href="https://emrahdiril.com" />
 	<link rel="stylesheet" href="style.css">
@@ -16,18 +17,20 @@ record_visit();
 <body>
 
 <div class="container">
-	<h1><a href="https://emrahdiril.com">Emrah Diril</a></h1>
-	<div class="social-links">
-		<a href="http://x.com/emrahdma" title="X (Twitter)">𝕏</a>
-		<a href="http://linkedin.com/in/ediril" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-		<a href="http://github.com/ediril" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://instagram.com/emrahdiril" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://emrahdiril.com/notes" title="My Notes"><i class="fa fa-file"></i></a>
+	<div class="text-center mt-4">
+		<h1><a href="https://emrahdiril.com" class="text-decoration-none">Emrah Diril</a></h1>
+		<div class="social-links d-flex justify-content-center gap-3 mb-5">
+			<a href="http://x.com/emrahdma" title="X (Twitter)" class="text-decoration-none">𝕏</a>
+			<a href="http://linkedin.com/in/ediril" title="LinkedIn" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
+			<a href="http://github.com/ediril" title="GitHub" class="text-decoration-none"><i class="fab fa-github"></i></a>
+			<a href="https://instagram.com/emrahdiril" title="Instagram" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+			<a href="https://emrahdiril.com/notes" title="My Notes" class="text-decoration-none"><i class="fa fa-file"></i></a>
+		</div>
 	</div>
 
-	<h2>PROJECTS</h2>
-    <h3>
-        <ul>
+	<h2 class="mb-4">PROJECTS</h2>
+	<div class="mb-5">
+        <ul class="list-unstyled">
         <li id="notemodo"><a href="https://notemodo.com">Notemodo</a>
 			<p>From Apple Notes to blog posts</p>
 		</li>
@@ -63,21 +66,22 @@ record_visit();
         <li id="traqen"><a href="https://traqen.com">Traqen</a>
 			<p>Track anything</p>
 		</li>
-	</ul></h3>
+	</ul>
+	</div>
 
-	<div class="email-form-wrapper">
-		<div class="email-form">
-			<h3>Get project updates and keep in touch</h3>
-			<form class="email-input-group" action="#" method="post">
-				<input type="email" class="email-input" placeholder="Enter your email" required>
-				<button type="submit" class="email-submit">Subscribe</button>
+	<div class="d-flex justify-content-center my-5">
+		<div class="email-form p-4 rounded">
+			<h3 class="text-center mb-3">Get project updates and keep in touch</h3>
+			<form class="d-flex gap-2 justify-content-center" action="#" method="post">
+				<input type="email" class="form-control email-input" placeholder="Enter your email" required style="max-width: 300px;">
+				<button type="submit" class="btn email-submit px-3">Subscribe</button>
 			</form>
 		</div>
 	</div>
 
-	<footer class="footer">
-		<img src="_img/emrah.jpg" class="footer-img">
-		<p style="margin-bottom: 4px;">Sometimes I believe as many as six impossible things before breakfast</p>
+	<footer class="text-center my-5">
+		<img src="_img/emrah.jpg" class="footer-img mx-auto d-block rounded mb-3">
+		<p class="mb-1">Sometimes I believe as many as six impossible things before breakfast</p>
 	</footer>
 </div>		
 
