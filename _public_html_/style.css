@@ -76,6 +76,7 @@ a:hover {
 	background: rgba(230, 192, 138, 0.05);
 	border: 1px solid rgba(230, 192, 138, 0.2);
 	max-width: 500px;
+	padding: 40px 50px !important;
 }
 
 .email-form h3 {
@@ -145,6 +146,10 @@ footer p {
 	.footer-img {
 		width: 140px;
 		height: 140px;
+	}
+
+	.email-form {
+		padding: 40px 30px !important;
 	}
 
 	.email-form h3 {

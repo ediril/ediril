@@ -71,7 +71,7 @@ record_visit();
 
 	<div class="d-flex justify-content-center my-5">
 		<div class="email-form p-4 rounded">
-			<h3 class="text-center mb-3">Get project updates and keep in touch</h3>
+			<h3 class="text-center mb-4">Let's keep in touch</h3>
 			<form class="d-flex gap-2 justify-content-center" action="#" method="post">
 				<input type="email" class="form-control email-input" placeholder="Enter your email" required style="max-width: 300px;">
 				<button type="submit" class="btn email-submit px-3">Subscribe</button>
