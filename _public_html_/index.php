@@ -1,4 +1,5 @@
 <?php
+require_once 'collectiq/component/WaitlistComponent.php';
 require_once __DIR__ . '/_banalytiq/banalytiq.php';
 record_visit();
 ?>
@@ -9,9 +10,10 @@ record_visit();
 	<title>EMRAH DIRIL</title>
 	<meta name="robots" content="noarchive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://emrahdiril.com" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="canonical" href="https://emrahdiril.com" />
+    <?php $waitlist = new WaitlistComponent(); echo $waitlist->renderStyles(); ?>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,7 +59,7 @@ record_visit();
 		<li id="banalytiq"><a href="https://banalytiq.com">Banalytiq</a> <a href="https://github.com/ediril/banalytiq"><i class="fab fa-github"></i></a>
 			<p>A simple yet sufficient server-side analytics library</p>
 		</li>
-		<li id="collectiq"><a href="https://github.com/ediril/collectiq">Collectiq</a> <a href="https://github.com/ediril/collectiq"><i class="fa fa-github"></i></a>
+		<li id="collectiq"><a href="https://github.com/ediril/collectiq">Collectiq</a> <a href="https://github.com/ediril/collectiq"><i class="fab fa-github"></i></a>
 			<p>Email address collection component</p>
 		</li>
         <li id="reddswan"><a href="https://reddswan.com">ReddSwan</a>
@@ -72,10 +74,7 @@ record_visit();
 	<div class="d-flex justify-content-center my-5">
 		<div class="email-form p-4 rounded">
 			<h3 class="text-center mb-4">Let's keep in touch</h3>
-			<form class="d-flex gap-2 justify-content-center" action="#" method="post">
-				<input type="email" class="form-control email-input" placeholder="Enter your email" required style="max-width: 300px;">
-				<button type="submit" class="btn email-submit px-3">Subscribe</button>
-			</form>
+            <?php echo $waitlist->renderForm(); ?>
 		</div>
 	</div>
 
@@ -84,6 +83,7 @@ record_visit();
 		<p class="mb-1">Sometimes I believe as many as six impossible things before breakfast</p>
 	</footer>
 </div>		
-
+    
+    <?php echo $waitlist->renderScripts(); ?>
 </body>
 </html>

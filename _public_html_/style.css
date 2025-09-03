@@ -71,6 +71,35 @@ a:hover {
 	color: #e6c08a;
 }
 
+.collectiq-input-container {
+    border: 2px solid #796148;
+    border-radius: 10px;
+}
+
+/* Override the submit button */
+.collectiq-submit-btn {
+    background: linear-gradient(45deg, #d4a574, #e6c08a);
+    border-radius: 20px;
+    font-size: 1.2rem;
+    min-width: 100px;
+    max-width: 164px;
+}
+
+/* Override button hover state */
+.collectiq-submit-btn:hover {
+    background: linear-gradient(45deg, #d4a574, #e6c08a);
+    transform: translateY(-2px);
+}
+
+.collectiq-submit-btn:active {
+    background: linear-gradient(45deg, #d4a574, #e6c08a);
+    transform: translateY(0px);
+}
+
+.email-form .collectiq-submit-btn .collectiq-backdrop {
+    display: none;
+}
+
 /* Email form custom styling */
 .email-form {
 	background: rgba(230, 192, 138, 0.05);
@@ -83,31 +112,6 @@ a:hover {
 	color: #e6c08a;
 	font-size: 1.5rem;
 	font-weight: 500;
-}
-
-.email-input {
-	background: #1a1a1a;
-	border: 1px solid #444;
-	color: #e6c08a;
-}
-
-.email-input:focus {
-	background: #222;
-	border-color: #d4a574;
-	color: #e6c08a;
-	box-shadow: 0 0 0 0.2rem rgba(212, 165, 116, 0.25);
-}
-
-.email-submit {
-	background: #d4a574;
-	color: #0a0a0a;
-	border: none;
-	font-weight: 500;
-}
-
-.email-submit:hover {
-	background: #e6c08a;
-	color: #0a0a0a;
 }
 
 /* Footer */
