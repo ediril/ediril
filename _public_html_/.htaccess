@@ -1,15 +1,6 @@
 Options -Indexes
 
-# SetEnvIfNoCase User-Agent ".*(Linux x86_64|Ubuntu|Windows NT 5).*" deny_user
-# SetEnvIfNoCase User-Agent ".*(Sogou|Moreover|Nimbostratus|Baiduspider|domaincrawler).*" deny_user
-# BrowserMatchNoCase ".*(?<!ro|\/|google|yandex|yandexmobile|bing|apple)(bot).*" deny_user
-
-# order allow,deny
-# deny from env=deny_user
-# allow from all
-
 RewriteEngine On
-
 RewriteRule ^_banalytiq(/|$) - [R=404,L]
 
 RewriteCond %{HTTPS} !=on
@@ -18,11 +9,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 # Handle static files directly
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^static/ - [L]
-
-# Redirect all other requests to index.php (disabled)
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ index.php [QSA,L]
 
 # Set proper MIME types for static files
 <FilesMatch "\.(css)$">
