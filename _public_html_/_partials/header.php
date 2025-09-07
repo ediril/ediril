@@ -10,3 +10,4 @@
 		</div>
 		<img src="_img/emrah.jpg" class="navbar-img rounded position-absolute top-50 end-0 translate-middle-y">
 	</div>
+    <br>

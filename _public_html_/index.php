@@ -17,10 +17,10 @@ include '_partials/head.php';
 <div class="container">
 	<?php include '_partials/header.php'; ?>
 
-	<div class="border rounded p-4 mb-4">
+	<div class="p-4 mb-4">
         <div class="d-flex align-items-baseline mb-4">
 			<h2 class="mb-0">RECENT PROJECTS</h2>
-			<a class="text-decoration-none text-rust fs-4 ms-5" href="projects.php">See All</a>
+			<a class="fs-4 ms-5" href="projects.php">See All</a>
 		</div>
 		<div class="mb-0">
 			<ul class="list-unstyled">
@@ -48,10 +48,10 @@ include '_partials/head.php';
 		</div>
 	</div>
 
-	<div class="border rounded p-4 mb-5">
+	<div class="p-4 mb-5">
         <div class="d-flex align-items-baseline mb-4">
 			<h2 class="mb-0">RECENT NOTES</h2>
-			<a class="fs-6 ms-5" href="/notes">See All</a>
+			<a class="fs-4 ms-5" href="/notes">See All</a>
 		</div>
 		<div class="mb-0">
 			<ul class="list-unstyled">
