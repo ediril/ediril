@@ -1,87 +1,86 @@
 <?php
 require_once '_collectiq/component/WaitlistComponent.php';
 require_once __DIR__ . '/_banalytiq/banalytiq.php';
+require_once 'common.php';
 record_visit();
 ?>
 
 <!DOCTYPE HTML>
 <html>
-<head>
-	<title>EMRAH DIRIL</title>
-	<meta name="robots" content="noarchive">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://emrahdiril.com" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <?php $waitlist = new WaitlistComponent('_collectiq'); echo $waitlist->renderStyles(); ?>
-	<link rel="stylesheet" href="style.css">
-</head>
+<?php
+$pageTitle = 'EMRAH DIRIL';
+$canonicalUrl = 'https://emrahdiril.com';
+include '_partials/head.php';
+?>
 <body>
 
 <div class="container">
-	<div class="text-center mt-4">
-		<h1 class="mb-0"><a href="https://emrahdiril.com" class="text-decoration-none">Emrah Diril</a></h1>
-		<div class="social-links d-flex justify-content-center gap-3 mb-5">
-			<a href="http://x.com/emrahdma" title="X (Twitter)" class="text-decoration-none">𝕏</a>
-			<a href="http://linkedin.com/in/ediril" title="LinkedIn" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
-			<a href="http://github.com/ediril" title="GitHub" class="text-decoration-none"><i class="fab fa-github"></i></a>
-			<a href="https://instagram.com/emrahdiril" title="Instagram" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
-			<a href="https://emrahdiril.com/notes" title="My Notes" class="text-decoration-none"><i class="fa fa-file"></i></a>
+	<?php include '_partials/header.php'; ?>
+
+	<div class="border rounded p-4 mb-4">
+        <div class="d-flex align-items-baseline mb-4">
+			<h2 class="mb-0">RECENT PROJECTS</h2>
+			<a class="text-decoration-none text-rust fs-4 ms-5" href="projects.php">See All</a>
+		</div>
+		<div class="mb-0">
+			<ul class="list-unstyled">
+			<?php
+			$recentProjects = getProjects(4);
+			foreach ($recentProjects as $project) {
+				echo '<li id="' . htmlspecialchars($project['id']) . '">';
+				echo '<a href="' . htmlspecialchars($project['url']) . '">' . htmlspecialchars($project['name']) . '</a>';
+				
+				// Add GitHub link if available
+				if (isset($project['github_url']) && !empty($project['github_url'])) {
+					echo ' <a href="' . htmlspecialchars($project['github_url']) . '"><i class="fab fa-github"></i></a>';
+				}
+				
+				// Add Instagram link if available
+				if (isset($project['instagram_url']) && !empty($project['instagram_url'])) {
+					echo ' <a href="' . htmlspecialchars($project['instagram_url']) . '"><i class="fab fa-instagram"></i></a>';
+				}
+				
+				echo '<p>' . htmlspecialchars($project['description']) . '</p>';
+				echo '</li>';
+			}
+			?>
+			</ul>
 		</div>
 	</div>
 
-	<h2 class="mb-4">PROJECTS</h2>
-	<div class="mb-5">
-        <ul class="list-unstyled">
-        <li id="notemodo"><a href="https://notemodo.com">Notemodo</a>
-			<p>From Apple Notes to blog posts</p>
-		</li>
-        <li id="doshmodo"><a href="https://doshmodo.com">Doshmodo</a>
-            <p>Find your way of money</p>
-		</li>
-        <li id="binge-worthy-shows"><a href="https://bingeworthyshows.tv">Binge-Worthy Shows</a>
-            <a href="https://github.com/ediril/binge-worthy-public"><i class="fab fa-github"></i></a>
-			<p>A curated list of binge-worthy shows on YouTube</p>
-		</li>
-        <li id="founderfodder"><a href="https://founderfodder.com">FounderFodder</a>
-			<p>Inspiration for founders, makers and tinkerers</p>
-		</li>
-		<li id="chatgpt-conversation-exporter"><a href="https://emrahdiril.com/chatgpt2pdf">ChatGPT Conversation Exporter</a>
-			<p>Save and print your ChatGPT conversations as clean PDFs</p>
-		</li>
-        <li id="dream-vistas-art"><a href="https://dreamvistas.art">Dream Vistas Art</a> <a href="https://instagram.com/dream_vistas.art"><i class="fab fa-instagram"></i></a>
-			<p>The Dreamstress weaves surreal, natured-inspired dreams infused with psychotropic wonder for all</p>
-			<p>-- Surrealist dream-like art inspired by nature and psychotropia</p>
-		</li>
-		<li id="scrubbler"><a href="https://emrahdiril.com/scrubbler">Scrubbler</a>
-			<p>A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube</p>
-		</li>
-		<li id="banalytiq"><a href="https://banalytiq.com">Banalytiq</a> <a href="https://github.com/ediril/banalytiq"><i class="fab fa-github"></i></a>
-			<p>A simple yet sufficient server-side analytics library</p>
-		</li>
-		<li id="collectiq"><a href="https://github.com/ediril/collectiq">Collectiq</a> <a href="https://github.com/ediril/collectiq"><i class="fab fa-github"></i></a>
-			<p>Email address collection component</p>
-		</li>
-        <li id="reddswan"><a href="https://reddswan.com">ReddSwan</a>
-			<p>Pros don't use GMail</p>
-		</li>
-        <li id="traqen"><a href="https://traqen.com">Traqen</a>
-			<p>Track anything</p>
-		</li>
-	</ul>
+	<div class="border rounded p-4 mb-5">
+        <div class="d-flex align-items-baseline mb-4">
+			<h2 class="mb-0">RECENT NOTES</h2>
+			<a class="fs-6 ms-5" href="/notes">See All</a>
+		</div>
+		<div class="mb-0">
+			<ul class="list-unstyled">
+			<?php
+			$recentNotes = getNotes(4);
+			foreach ($recentNotes as $note) {
+				echo '<li id="' . htmlspecialchars($note['id']) . '">';
+				echo '<a href="' . htmlspecialchars($note['url']) . '">' . htmlspecialchars($note['title']) . '</a>';
+				
+				// Display last updated date if available
+				if ($note['last_updated']) {
+					echo ' <span class="fs-6" style="color: #a0522d;">(' . htmlspecialchars($note['last_updated']) . ')</span>';
+				}
+				
+				echo '</li>';
+			}
+			?>
+			</ul>
+		</div>
 	</div>
 
 	<div class="d-flex justify-content-center my-5">
 		<div class="email-form p-4 rounded">
 			<h3 class="text-center mb-4">Let's keep in touch</h3>
-            <?php echo $waitlist->renderForm(); ?>
+            <?php echo $waitlist->renderForm('Enter your email address'); ?>
 		</div>
 	</div>
 
-	<footer class="text-center my-5">
-		<img src="_img/emrah.jpg" class="footer-img mx-auto d-block rounded mb-3">
-		<p class="mb-1">Sometimes I believe as many as six impossible things before breakfast</p>
-	</footer>
+	<?php include '_partials/footer.php'; ?>
 </div>		
     
     <?php echo $waitlist->renderScripts(); ?>

@@ -1,48 +1,63 @@
 /* Custom styles that override or extend Bootstrap */
 body {
 	background-color: #0a0a0a;
-	color: #e6c08a;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+	color: #cd853f;
+	font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Consolas', monospace;
 }
 
 .container {
 	max-width: 860px;
 }
 
+/* Border styling to match text color */
+.border {
+	border-color: #cd853f !important;
+}
+
+/* Navbar image styling */
+.navbar-img {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #cd853f;
+	object-fit: cover;
+}
+
 
 /* Typography */
 h1 {
-	font-size: 3.5rem;
-	color: #e6c08a;
+	font-size: 4rem;
+	color: #cd853f;
 	font-weight: 600;
 	font-variant: small-caps;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 h1 a {
-	color: #e6c08a;
+	color: #cd853f;
 }
 
 h1 a:hover {
-	color: #e6c08a;
+	color: #d2691e;
 }
 
 h2 {
-	font-size: 1.85rem;
-	color: #e6c08a;
+	font-size: 2rem;
+	color: #cd853f;
 	font-weight: 500;
-	text-shadow: 0 0 20px rgba(230, 192, 138, 0.6);
+	text-shadow: 0 0 20px rgba(205, 133, 63, 0.6);
+	letter-spacing: -0.02em;
 }
 
 /* Social links custom styling */
 .social-links a {
 	font-size: 1.5rem;
-	color: #d4a574;
+	color: #b8860b;
 	transition: transform 0.2s ease;
 }
 
 .social-links a:hover {
 	transform: scale(1.2);
-	color: #e6c08a;
+	color: #cd853f;
 	text-decoration: none;
 }
 
@@ -52,33 +67,45 @@ li {
 }
 
 li a {
-	font-size: 1.375rem;
+	font-size: 1.1rem;
+	letter-spacing: -0.01em;
 }
 
 li p {
 	margin: 0;
 	font-size: 1.1rem;
-	color: #9a8260;
+	color: #a0522d;
 	font-weight: 400;
 }
 
-/* Links */
+/* Default link colors */
 a {
-	color: #d4a574;
+	color: #b8860b;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #e6c08a;
+	color: #cd853f;
 }
 
+/* Custom Bootstrap color utilities for when you need !important */
+.text-rust {
+	color: #b8860b !important;
+}
+
+.text-rust:hover {
+	color: #cd853f !important;
+}
+
+
 .collectiq-input-container {
-    border: 2px solid #796148;
+    border: 2px solid #a0522d;
     border-radius: 10px;
 }
 
 /* Override the submit button */
 .collectiq-submit-btn {
-    background: linear-gradient(45deg, #d4a574, #e6c08a);
+    background: linear-gradient(45deg, #b8860b, #cd853f);
     border-radius: 20px;
     font-size: 1.2rem;
     min-width: 100px;
@@ -87,12 +114,12 @@ a:hover {
 
 /* Override button hover state */
 .collectiq-submit-btn:hover {
-    background: linear-gradient(45deg, #d4a574, #e6c08a);
+    background: linear-gradient(45deg, #b8860b, #cd853f);
     transform: translateY(-2px);
 }
 
 .collectiq-submit-btn:active {
-    background: linear-gradient(45deg, #d4a574, #e6c08a);
+    background: linear-gradient(45deg, #b8860b, #cd853f);
     transform: translateY(0px);
 }
 
@@ -102,14 +129,14 @@ a:hover {
 
 /* Email form custom styling */
 .email-form {
-	background: rgba(230, 192, 138, 0.05);
-	border: 1px solid rgba(230, 192, 138, 0.2);
+	background: rgba(205, 133, 63, 0.05);
+	border: 1px solid rgba(205, 133, 63, 0.2);
 	max-width: 500px;
 	padding: 40px 50px !important;
 }
 
 .email-form h3 {
-	color: #e6c08a;
+	color: #cd853f;
 	font-size: 1.5rem;
 	font-weight: 500;
 }
@@ -118,11 +145,11 @@ a:hover {
 .footer-img {
 	width: 178px;
 	height: 178px;
-	border: 1px solid #999;
+	border: 1px solid #cd853f;
 }
 
 footer p {
-	color: #9a8260;
+	color: #a0522d;
 }
 
 /* Mobile responsive adjustments */

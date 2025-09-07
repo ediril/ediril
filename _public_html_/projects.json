@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "id": "notemodo",
+      "name": "Notemodo",
+      "url": "https://notemodo.com",
+      "description": "From Apple Notes to blog posts",
+      "last_updated": "2025-09-02"
+    },
+    {
+      "id": "doshmodo",
+      "name": "Doshmodo",
+      "url": "https://doshmodo.com",
+      "description": "Find your way of money",
+      "last_updated": "2025-09-05"
+    },
+    {
+      "id": "binge-worthy-shows",
+      "name": "Binge-Worthy Shows",
+      "url": "https://bingeworthyshows.tv",
+      "description": "A curated list of binge-worthy shows on YouTube",
+      "github_url": "https://github.com/ediril/binge-worthy-public",
+      "last_updated": "2025-08-28"
+    },
+    {
+      "id": "founderfodder",
+      "name": "FounderFodder",
+      "url": "https://founderfodder.com",
+      "description": "Inspiration for founders, makers and tinkerers",
+      "last_updated": "2025-08-10"
+    },
+    {
+      "id": "chatgpt-conversation-exporter",
+      "name": "ChatGPT Conversation Exporter",
+      "url": "https://emrahdiril.com/chatgpt2pdf",
+      "description": "Save and print your ChatGPT conversations as clean PDFs",
+      "last_updated": "2025-06-28"
+    },
+    {
+      "id": "dream-vistas-art",
+      "name": "Dream Vistas Art",
+      "url": "https://dreamvistas.art",
+      "description": "The Dreamstress weaves surreal, natured-inspired dreams infused with psychotropic wonder for all -- Surrealist dream-like art inspired by nature and psychotropia",
+      "instagram_url": "https://instagram.com/dream_vistas.art",
+      "last_updated": "2025-08-02"
+    },
+    {
+      "id": "scrubbler",
+      "name": "Scrubbler",
+      "url": "https://emrahdiril.com/scrubbler",
+      "description": "A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube",
+      "last_updated": "2025-06-20"
+    },
+    {
+      "id": "banalytiq",
+      "name": "Banalytiq",
+      "url": "https://banalytiq.com",
+      "description": "A simple yet sufficient server-side analytics library",
+      "github_url": "https://github.com/ediril/banalytiq",
+      "last_updated": null
+    },
+    {
+      "id": "collectiq",
+      "name": "Collectiq",
+      "url": "https://github.com/ediril/collectiq",
+      "description": "Email address collection component",
+      "github_url": "https://github.com/ediril/collectiq",
+      "last_updated": null
+    },
+    {
+      "id": "reddswan",
+      "name": "ReddSwan",
+      "url": "https://reddswan.com",
+      "description": "Pros don't use GMail",
+      "last_updated": "2025-06-10"
+    },
+    {
+      "id": "traqen",
+      "name": "Traqen",
+      "url": "https://traqen.com",
+      "description": "Track anything",
+      "last_updated": "2025-06-29"
+    }
+  ]
+}
