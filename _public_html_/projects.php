@@ -17,8 +17,8 @@ include '_partials/head.php';
 <div class="container">
 	<?php include '_partials/header.php'; ?>
 
-	<h2 class="mb-4">PROJECTS</h2>
-	<div class="mb-5">
+	<div class="p-4 mb-5">
+    	<h2 class="mb-4">PROJECTS</h2>
         <ul class="list-unstyled">
         <?php
         $allProjects = getProjects();

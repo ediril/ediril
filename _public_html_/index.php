@@ -18,10 +18,7 @@ include '_partials/head.php';
 	<?php include '_partials/header.php'; ?>
 
 	<div class="p-4 mb-4">
-        <div class="d-flex align-items-baseline mb-4">
-			<h2 class="mb-0">RECENT PROJECTS</h2>
-			<a class="fs-4 ms-5" href="projects.php">See All</a>
-		</div>
+        <h2 class="mb-3">RECENT PROJECTS</h2>
 		<div class="mb-0">
 			<ul class="list-unstyled">
 			<?php
@@ -46,13 +43,13 @@ include '_partials/head.php';
 			?>
 			</ul>
 		</div>
+        <div class="d-flex align-items-baseline mb-4">
+			<a class="fs-4" href="projects.php">See All</a>
+		</div>
 	</div>
 
 	<div class="p-4 mb-5">
-        <div class="d-flex align-items-baseline mb-4">
-			<h2 class="mb-0">RECENT NOTES</h2>
-			<a class="fs-4 ms-5" href="/notes">See All</a>
-		</div>
+        <h2 class="mb-3">RECENT NOTES</h2>
 		<div class="mb-0">
 			<ul class="list-unstyled">
 			<?php
@@ -70,6 +67,9 @@ include '_partials/head.php';
 			}
 			?>
 			</ul>
+		</div>
+        <div class="d-flex align-items-baseline mb-4">
+			<a class="fs-4" href="/notes">See All</a>
 		</div>
 	</div>
 
