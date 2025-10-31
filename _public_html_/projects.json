@@ -39,8 +39,8 @@
     {
       "id": "chatgpt-conversation-exporter",
       "name": "ChatGPT Conversation Exporter",
-      "url": "https://emrahdiril.com/chatgpt2pdf",
-      "description": "Save and print your ChatGPT conversations as clean PDFs",
+      "url": "https://emrahdiril.com/chatgpt-export",
+      "description": "Export your ChatGPT conversations as clean PDFs or HTML",
       "last_updated": "2025-06-28"
     },
     {
