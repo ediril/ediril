@@ -4,7 +4,17 @@ RewriteEngine On
 RewriteRule ^_banalytiq(/|$) - [R=404,L]
 
 RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+# Remove .php extension from URLs (main domain only, not add-on domains)
+# Redirect .php URLs to clean URLs
+RewriteCond %{THE_REQUEST} ^GET\ /([^/]+)\.php
+RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
+
+# Serve .php file for clean URLs (internal rewrite, no redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.php [L]
 
 # Handle static files directly
 RewriteCond %{REQUEST_FILENAME} -f
