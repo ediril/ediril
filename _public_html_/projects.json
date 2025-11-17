@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "id": "millionminds",
+      "name": "Million Minds",
+      "url": "https://millionminds.one",
+      "description": "Biologically inspired AI framework",
+      "last_updated": "2025-11-16"
+    },
+    {
       "id": "vodomodo",
       "name": "Vodomodo",
       "url": "https://vodomodo.com",
@@ -26,7 +33,7 @@
       "name": "Binge-Worthy Shows",
       "url": "https://bingeworthyshows.tv",
       "description": "A curated list of binge-worthy shows on YouTube",
-      "github_url": "https://github.com/ediril/binge-worthy-public",
+      "github_url": null,
       "last_updated": "2025-08-28"
     },
     {
@@ -34,7 +41,7 @@
       "name": "FounderFodder",
       "url": "https://founderfodder.com",
       "description": "Inspiration for founders, makers and tinkerers",
-      "last_updated": "2025-08-10"
+      "last_updated": "2025-10-31"
     },
     {
       "id": "chatgpt-conversation-exporter",

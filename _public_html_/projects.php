@@ -37,6 +37,13 @@ include '_partials/head.php';
             }
             
             echo '<p>' . htmlspecialchars($project['description']) . '</p>';
+
+            if (!empty($project['last_updated'])) {
+                $date = DateTime::createFromFormat('Y-m-d', $project['last_updated']);
+                $formattedDate = $date ? $date->format('F j, Y') : $project['last_updated'];
+                echo '<p class="fs-6" style="color: #a0522d;">Last updated: ' . htmlspecialchars($formattedDate) . '</p>';
+            }
+
             echo '</li>';
         }
         ?>
