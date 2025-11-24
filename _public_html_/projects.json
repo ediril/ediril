@@ -15,13 +15,6 @@
       "last_updated": "2025-09-15"
     },
     {
-      "id": "doshmodo",
-      "name": "Doshmodo",
-      "url": "https://doshmodo.com",
-      "description": "Find your way of money",
-      "last_updated": "2025-09-05"
-    },
-    {
       "id": "notemodo",
       "name": "Notemodo",
       "url": "https://notemodo.com",
@@ -34,14 +27,14 @@
       "url": "https://bingeworthyshows.tv",
       "description": "A curated list of binge-worthy shows on YouTube",
       "github_url": null,
-      "last_updated": "2025-08-28"
+      "last_updated": "2025-11-23"
     },
     {
       "id": "founderfodder",
       "name": "FounderFodder",
       "url": "https://founderfodder.com",
       "description": "Inspiration for founders, makers and tinkerers",
-      "last_updated": "2025-10-31"
+      "last_updated": "2025-11-20"
     },
     {
       "id": "chatgpt-conversation-exporter",
@@ -56,6 +49,14 @@
       "url": "https://emrahdiril.com/scrubbler",
       "description": "A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube",
       "last_updated": "2025-06-20"
+    },
+    {
+      "id": "doshmodo",
+      "name": "Doshmodo",
+      "url": "https://doshmodo.com",
+      "description": "Find your way of money",
+      "github_url": "https://github.com/ediril/doshmodo-app",
+      "last_updated": null
     },
     {
       "id": "banalytiq",
