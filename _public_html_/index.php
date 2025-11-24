@@ -51,22 +51,30 @@ include '_partials/head.php';
 	<div class="p-4 mb-5">
         <h2 class="mb-3">RECENT NOTES</h2>
 		<div class="mb-0">
-			<ul class="list-unstyled">
-			<?php
-			$recentNotes = getNotes(4);
-			foreach ($recentNotes as $note) {
-				echo '<li id="' . htmlspecialchars($note['id']) . '">';
-				echo '<a href="' . htmlspecialchars($note['url']) . '">' . htmlspecialchars($note['title']) . '</a>';
-				
-				// Display last updated date if available
-				if ($note['last_updated']) {
-					echo ' <span class="fs-6" style="color: #a0522d;">(' . htmlspecialchars($note['last_updated']) . ')</span>';
-				}
-				
-				echo '</li>';
-			}
-			?>
-			</ul>
+            <?php
+            $notes = getRecentNotes(4);
+
+            if (empty($notes)) {
+                echo '<p class="empty-state">Notes coming soon...</p>';
+            } else {
+                echo '<ul class="list-unstyled">';
+                foreach ($notes as $note) {
+                    echo '<li class="note-item" id="' . htmlspecialchars($note['id']) . '">';
+                    echo '<a href="' . htmlspecialchars($note['url']) . '">' . htmlspecialchars($note['title']) . '</a>';
+
+                    // Display date
+                    echo '<div class="fs-6" style="color: #a0522d;">' . htmlspecialchars($note['date']) . '</div>';
+
+                    // Display excerpt if available
+                    if (!empty($note['excerpt'])) {
+                        echo '<p class="note-excerpt">' . htmlspecialchars($note['excerpt']) . '</p>';
+                    }
+
+                    echo '</li>';
+                }
+                echo '</ul>';
+            }
+            ?>
 		</div>
         <div class="d-flex align-items-baseline mb-4">
 			<a class="fs-4" href="/notes">See All</a>
