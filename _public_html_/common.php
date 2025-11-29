@@ -10,9 +10,16 @@ define('NOTES_EXCERPT_LENGTH', 150);
  * @return string The excerpt
  */
 function build_note_excerpt($content, $length = 150) {
-    // Strip shortcodes and HTML tags
-    $content = strip_shortcodes($content);
-    $content = wp_strip_all_tags($content);
+    // Strip shortcodes and HTML tags using WordPress helpers if available,
+    // otherwise fall back to basic HTML stripping.
+    if (function_exists('strip_shortcodes')) {
+        $content = strip_shortcodes($content);
+    }
+    if (function_exists('wp_strip_all_tags')) {
+        $content = wp_strip_all_tags($content);
+    } else {
+        $content = strip_tags($content);
+    }
 
     // Trim whitespace
     $content = trim($content);
@@ -90,60 +97,52 @@ function getProjects($limit = null) {
 
 
 function getRecentNotes($limit = 3) {
-    // Load WordPress if not already loaded
-    $wpLoadPath = __DIR__ . '/notes/wp-load.php';
-
-    if (!file_exists($wpLoadPath)) {
-        error_log("WordPress not found at: $wpLoadPath");
-        return [];
-    }
-
-    // Suppress WordPress output and load core
-    if (!defined('ABSPATH')) {
-        ob_start();
-        require_once $wpLoadPath;
-        ob_end_clean();
-    }
-
-    // Query posts directly using WordPress functions
-    $args = [
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'posts_per_page' => $limit,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'no_found_rows' => true,
-        'update_post_meta_cache' => false,
-        'update_post_term_cache' => false
-    ];
-
-    $query = new WP_Query($args);
     $notes = [];
 
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            $content = get_the_content(null, false);
+    // Fetch recent posts via the WordPress REST API to avoid
+    // booting the full WordPress stack in-process.
+    $limit = (int) $limit;
+    if ($limit <= 0) {
+        $limit = 3;
+    }
 
-            // Decode any HTML entities so that titles and excerpts
-            // are stored as clean UTF-8 text, then safely escaped
-            // once when rendering.
-            $title = html_entity_decode(get_the_title(), ENT_QUOTES | ENT_HTML5, 'UTF-8');
-            $excerpt = html_entity_decode(
-                build_note_excerpt($content, NOTES_EXCERPT_LENGTH),
-                ENT_QUOTES | ENT_HTML5,
-                'UTF-8'
-            );
+    $apiUrl = 'https://emrahdiril.com/notes/wp-json/wp/v2/posts'
+        . '?per_page=' . $limit
+        . '&_fields=id,link,title,excerpt,date';
 
-            $notes[] = [
-                'id' => get_the_ID(),
-                'title' => $title,
-                'url' => get_permalink(),
-                'date' => get_the_date('M j, Y'),
-                'excerpt' => $excerpt
-            ];
-        }
-        wp_reset_postdata();
+    $response = @file_get_contents($apiUrl);
+    if ($response === false) {
+        error_log("Failed to fetch recent notes from REST API: $apiUrl");
+        return $notes;
+    }
+
+    $posts = json_decode($response, true);
+    if (!is_array($posts)) {
+        error_log("Failed to decode REST API response for recent notes");
+        return $notes;
+    }
+
+    foreach ($posts as $post) {
+        $rawTitle = $post['title']['rendered'] ?? '';
+        $rawExcerpt = $post['excerpt']['rendered'] ?? '';
+        $rawDate = $post['date'] ?? null;
+
+        $title = html_entity_decode($rawTitle, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $excerpt = html_entity_decode(
+            build_note_excerpt($rawExcerpt, NOTES_EXCERPT_LENGTH),
+            ENT_QUOTES | ENT_HTML5,
+            'UTF-8'
+        );
+
+        $date = $rawDate ? date('M j, Y', strtotime($rawDate)) : '';
+
+        $notes[] = [
+            'id' => $post['id'] ?? null,
+            'title' => $title,
+            'url' => $post['link'] ?? '',
+            'date' => $date,
+            'excerpt' => $excerpt,
+        ];
     }
 
     return $notes;
