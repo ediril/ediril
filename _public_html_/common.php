@@ -124,12 +124,23 @@ function getRecentNotes($limit = 3) {
         while ($query->have_posts()) {
             $query->the_post();
             $content = get_the_content(null, false);
+
+            // Decode any HTML entities so that titles and excerpts
+            // are stored as clean UTF-8 text, then safely escaped
+            // once when rendering.
+            $title = html_entity_decode(get_the_title(), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $excerpt = html_entity_decode(
+                build_note_excerpt($content, NOTES_EXCERPT_LENGTH),
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
             $notes[] = [
                 'id' => get_the_ID(),
-                'title' => get_the_title(),
+                'title' => $title,
                 'url' => get_permalink(),
                 'date' => get_the_date('M j, Y'),
-                'excerpt' => build_note_excerpt($content, NOTES_EXCERPT_LENGTH)
+                'excerpt' => $excerpt
             ];
         }
         wp_reset_postdata();
