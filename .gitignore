@@ -1,6 +1,8 @@
 social-icons/
 notes*/
 twitter*/
+tweets/*.db
+tweets/*.zip
 
 .DS_Store
 *.old
