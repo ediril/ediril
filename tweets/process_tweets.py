@@ -5,13 +5,13 @@ import os
 import re
 
 # Path to your tweets.js file
-tweets_js_path = 'twitter-2025-11-27/data/tweets.js'
+tweets_js_path = 'tweets/twitter-2025-11-27/data/tweets.js'
 
 # Path to the output SQLite database
-db_path = 'tweets.db'
+db_path = 'tweets/tweets.db'
 
 # --- 1. Read and clean the JavaScript file ---
-with open(os.path.join("tweets", tweets_js_path), 'r', encoding='utf-8') as f:
+with open(tweets_js_path, 'r', encoding='utf-8') as f:
     js_content = f.read()
 
 # Remove the initial JavaScript assignment part ("window.YTD.tweets.part0 = ")
@@ -30,7 +30,7 @@ except json.JSONDecodeError as e:
     exit()
 
 # --- 3. Connect to SQLite and create the table ---
-conn = sqlite3.connect(os.path.join("tweets", db_path))
+conn = sqlite3.connect(db_path)
 c = conn.cursor()
 
 c.execute('''
@@ -53,6 +53,11 @@ for item in tweets_data:
     # Extract data, providing defaults for missing fields
     tweet_id = int(tweet.get('id', 0))
     full_text = tweet.get('full_text', '')
+    
+    # Skip retweets
+    if full_text.startswith('RT '):
+        continue
+
     favorite_count = int(tweet.get('favorite_count', 0))
     retweet_count = int(tweet.get('retweet_count', 0))
     in_reply_to_screen_name = tweet.get('in_reply_to_screen_name') # Can be None
