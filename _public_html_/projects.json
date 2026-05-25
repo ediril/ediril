@@ -5,14 +5,14 @@
       "name": "Million Minds",
       "url": "https://millionminds.one",
       "description": "Neuroscience-inspired AI Framework",
-      "last_updated": "2025-11-17"
+      "last_updated": "2026-05-18"
     },
     {
       "id": "vodomodo",
       "name": "Vodomodo",
       "url": "https://vodomodo.com",
       "description": "Edit videos with text commands",
-      "last_updated": "2025-09-15"
+      "last_updated": null
     },
     {
       "id": "notemodo",
@@ -27,21 +27,21 @@
       "url": "https://bingeworthyshows.tv",
       "description": "A curated list of binge-worthy shows on YouTube",
       "github_url": null,
-      "last_updated": "2025-11-23"
+      "last_updated": "2025-11-26"
     },
     {
       "id": "founderfodder",
       "name": "FounderFodder",
       "url": "https://founderfodder.com",
       "description": "Inspiration for founders, makers and tinkerers",
-      "last_updated": "2025-11-20"
+      "last_updated": null
     },
     {
       "id": "chatgpt-conversation-exporter",
       "name": "ChatGPT Conversation Exporter",
       "url": "https://emrahdiril.com/chatgpt-export",
       "description": "Export your ChatGPT conversations as clean PDFs or HTML",
-      "last_updated": "2025-06-28"
+      "last_updated": "2025-11-23"
     },
     {
       "id": "scrubbler",
@@ -56,7 +56,7 @@
       "url": "https://doshmodo.com",
       "description": "Find your way of money",
       "github_url": "https://github.com/ediril/doshmodo-app",
-      "last_updated": null
+      "last_updated": "2025-12-12"
     },
     {
       "id": "banalytiq",
@@ -79,7 +79,7 @@
       "name": "ReddSwan",
       "url": "https://reddswan.com",
       "description": "Pros don't use GMail",
-      "last_updated": "2025-06-10"
+      "last_updated": null
     },
     {
       "id": "traqen",

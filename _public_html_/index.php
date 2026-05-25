@@ -17,38 +17,7 @@ include '_partials/head.php';
 <div class="container">
 	<?php include '_partials/header.php'; ?>
 
-	<div class="p-4 mb-4">
-        <h2 class="mb-3">RECENT PROJECTS</h2>
-		<div class="mb-0">
-			<ul class="list-unstyled">
-			<?php
-			$recentProjects = getProjects(4);
-			foreach ($recentProjects as $project) {
-				echo '<li id="' . htmlspecialchars($project['id']) . '">';
-				echo '<a href="' . htmlspecialchars($project['url']) . '">' . htmlspecialchars($project['name']) . '</a>';
-				
-				// Add GitHub link if available
-				if (isset($project['github_url']) && !empty($project['github_url'])) {
-					echo ' <a href="' . htmlspecialchars($project['github_url']) . '"><i class="fab fa-github"></i></a>';
-				}
-				
-				// Add Instagram link if available
-				if (isset($project['instagram_url']) && !empty($project['instagram_url'])) {
-					echo ' <a href="' . htmlspecialchars($project['instagram_url']) . '"><i class="fab fa-instagram"></i></a>';
-				}
-				
-				echo '<p>' . htmlspecialchars($project['description']) . '</p>';
-				echo '</li>';
-			}
-			?>
-			</ul>
-		</div>
-        <div class="d-flex align-items-baseline mb-4">
-			<a class="fs-4" href="projects.php">See All</a>
-		</div>
-	</div>
-
-	<div class="p-4 mb-5">
+    <div class="p-4 mb-5">
         <h2 class="mb-3">RECENT NOTES</h2>
 		<div class="mb-0">
             <?php
@@ -78,6 +47,37 @@ include '_partials/head.php';
 		</div>
         <div class="d-flex align-items-baseline mb-4">
 			<a class="fs-4" href="/notes">See All</a>
+		</div>
+	</div>
+
+	<div class="p-4 mb-4">
+        <h2 class="mb-3">RECENT PROJECTS</h2>
+		<div class="mb-0">
+			<ul class="list-unstyled">
+			<?php
+			$recentProjects = getProjects(4);
+			foreach ($recentProjects as $project) {
+				echo '<li id="' . htmlspecialchars($project['id']) . '">';
+				echo '<a href="' . htmlspecialchars($project['url']) . '">' . htmlspecialchars($project['name']) . '</a>';
+				
+				// Add GitHub link if available
+				if (isset($project['github_url']) && !empty($project['github_url'])) {
+					echo ' <a href="' . htmlspecialchars($project['github_url']) . '"><i class="fab fa-github"></i></a>';
+				}
+				
+				// Add Instagram link if available
+				if (isset($project['instagram_url']) && !empty($project['instagram_url'])) {
+					echo ' <a href="' . htmlspecialchars($project['instagram_url']) . '"><i class="fab fa-instagram"></i></a>';
+				}
+				
+				echo '<p>' . htmlspecialchars($project['description']) . '</p>';
+				echo '</li>';
+			}
+			?>
+			</ul>
+		</div>
+        <div class="d-flex align-items-baseline mb-4">
+			<a class="fs-4" href="projects.php">See All</a>
 		</div>
 	</div>
 
