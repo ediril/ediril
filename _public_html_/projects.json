@@ -44,6 +44,13 @@
       "last_updated": "2025-11-23"
     },
     {
+      "id": "claude-conversation-exporter",
+      "name": "Claude Conversation Exporter",
+      "url": "https://emrahdiril.com/claude-export",
+      "description": "Export your Claude conversations as clean PDFs or HTML",
+      "last_updated": "2026-05-25"
+    },
+    {
       "id": "scrubbler",
       "name": "Scrubbler",
       "url": "https://emrahdiril.com/scrubbler",
