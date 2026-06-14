@@ -1,4 +1,4 @@
-	<div class="site-header position-relative mt-4 mb-5">
+	<div class="site-header position-relative mt-4">
 		<div class="site-title-block mx-4">
 			<h1 class="text-decoration-none mb-0"><a href="https://emrahdiril.com">Emrah Diril</a></h1>
 			<div class="social-links d-flex gap-3">

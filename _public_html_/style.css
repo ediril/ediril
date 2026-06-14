@@ -50,7 +50,7 @@ body {
 .site-header {
 	min-height: 124px;
 	padding: 18px 120px 18px 0;
-	border-bottom: 1px solid var(--border);
+	margin-top: 1rem !important;
 }
 
 .navbar-img {
@@ -272,6 +272,19 @@ footer {
 	padding-top: 1rem;
 }
 
+.container > .mb-5 {
+	margin-bottom: 1.5rem !important;
+}
+
+.container > .mb-4 {
+	margin-bottom: 1.25rem !important;
+}
+
+.container > .my-5 {
+	margin-top: 1.5rem !important;
+	margin-bottom: 1.75rem !important;
+}
+
 footer p {
 	color: var(--dim);
 	font-size: 0.82rem;
@@ -341,7 +354,8 @@ footer p {
 
 	.site-header {
 		min-height: 0;
-		padding: 12px 0 18px;
+		padding: 10px 0 14px;
+		margin-bottom: 1rem !important;
 	}
 
 	.navbar-img {
