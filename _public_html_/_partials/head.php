@@ -14,5 +14,5 @@ $canonicalUrl = $canonicalUrl ?? 'https://emrahdiril.com';
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <?php $waitlist = new WaitlistComponent('_collectiq'); echo $waitlist->renderStyles(); ?>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css?v=<?php echo filemtime(__DIR__ . '/../style.css'); ?>">
 </head>
