@@ -45,7 +45,7 @@ include '_partials/head.php';
             }
             ?>
 		</div>
-        <div class="d-flex align-items-baseline mb-4">
+        <div class="d-flex align-items-baseline">
 			<a class="fs-4" href="/notes">See All</a>
 		</div>
 	</div>
