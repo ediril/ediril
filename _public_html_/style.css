@@ -1,177 +1,315 @@
 /* Custom styles that override or extend Bootstrap */
+:root {
+	--bg: #050806;
+	--panel: #0a100b;
+	--panel-strong: #0d150e;
+	--text: #b9d8b4;
+	--muted: #7f9b79;
+	--dim: #5d7059;
+	--green: #9fdc8b;
+	--cyan: #b9d8b4;
+	--amber: #d6b86d;
+	--magenta: #c99572;
+	--border: #243424;
+}
+
+html {
+	background: var(--bg);
+}
+
 body {
-	background-color: #0a0a0a;
-	color: #cd853f;
-	font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Consolas', monospace;
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--text);
+	font-family: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+	font-size: 15px;
+	line-height: 1.48;
+	text-transform: none;
+}
+
+::selection {
+	background: var(--green);
+	color: #00130a;
 }
 
 .container {
-	max-width: 860px;
+	max-width: 900px;
 }
 
-/* Border styling to match text color */
+.container > .p-4 {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	padding: 1.2rem !important;
+}
+
 .border {
-	border-color: #cd853f !important;
+	border-color: var(--border) !important;
 }
 
-/* Navbar image styling */
+.site-header {
+	min-height: 124px;
+	padding: 18px 120px 18px 0;
+	border-bottom: 1px solid var(--border);
+}
+
 .navbar-img {
-	width: 100px;
-	height: 100px;
-	border: 1px solid #cd853f;
+	width: 94px;
+	height: 94px;
+	border: 1px solid var(--green);
+	box-shadow: 0 0 0 3px rgba(159, 220, 139, 0.08), 0 0 18px rgba(159, 220, 139, 0.16);
+	filter: grayscale(1) contrast(1.18) sepia(0.35) hue-rotate(72deg) saturate(1.25);
 	object-fit: cover;
 }
 
+h1,
+h2,
+h3,
+p,
+a,
+li,
+input,
+button {
+	font-family: inherit;
+}
 
-/* Typography */
 h1 {
-	font-size: 4rem;
-	color: #cd853f;
+	margin: 0;
+	color: var(--green);
+	font-size: clamp(1.85rem, 4.5vw, 3.05rem);
 	font-weight: 600;
-	font-variant: small-caps;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+	font-variant: normal;
+	line-height: 1.05;
 }
 
 h1 a {
-	color: #cd853f;
+	color: var(--green);
 }
 
 h1 a:hover {
-	color: #d2691e;
+	color: var(--amber);
 }
 
 h2 {
-	font-size: 2rem;
-	color: #cd853f;
-	font-weight: 500;
-	text-shadow: 0 0 20px rgba(205, 133, 63, 0.6);
-	letter-spacing: -0.02em;
+	display: flex;
+	gap: 0.45rem;
+	align-items: center;
+	color: var(--cyan);
+	font-size: 1.05rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: lowercase;
 }
 
-/* Social links custom styling */
+h2::before {
+	content: '>';
+	color: var(--green);
+}
+
+h3 {
+	color: var(--amber);
+	font-size: 1.05rem;
+}
+
+.social-links {
+	margin-top: 0.65rem;
+}
+
 .social-links a {
-	font-size: 1.5rem;
-	color: #b8860b;
-	transition: transform 0.2s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.85rem;
+	height: 1.85rem;
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	background: var(--panel);
+	color: var(--cyan);
+	font-size: 1rem;
+	transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
 
 .social-links a:hover {
-	transform: scale(1.2);
-	color: #cd853f;
+	border-color: var(--green);
+	background: #17221b;
+	color: var(--green);
 	text-decoration: none;
 }
 
-/* Project list items */
 li {
-	margin-bottom: 16px;
+	position: relative;
+	margin-bottom: 12px;
+	padding-left: 1.15rem;
+}
+
+li::before {
+	content: '>';
+	position: absolute;
+	left: 0;
+	color: var(--green);
+	font-size: 0.9rem;
 }
 
 li a {
-	font-size: 1.1rem;
-	letter-spacing: -0.01em;
+	color: var(--amber);
+	font-size: 0.98rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: var(--green);
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-underline-offset: 4px;
 }
 
 li p {
-	margin: 0;
-	font-size: 1.1rem;
-	color: #a0522d;
+	margin: 0.08rem 0 0;
+	color: var(--muted);
+	font-size: 0.92rem;
 	font-weight: 400;
 }
 
-/* Default link colors */
+.note-date {
+	color: var(--dim);
+	font-size: 0.8rem !important;
+}
+
+.empty-state {
+	color: var(--muted);
+}
+
 a {
-	color: #b8860b;
+	color: var(--amber);
 	text-decoration: none;
 }
 
 a:hover {
-	color: #cd853f;
+	color: var(--green);
 }
 
-/* Custom Bootstrap color utilities for when you need !important */
 .text-rust {
-	color: #b8860b !important;
+	color: var(--amber) !important;
 }
 
 .text-rust:hover {
-	color: #cd853f !important;
+	color: var(--green) !important;
 }
-
 
 .collectiq-input-container {
-    border: 2px solid #a0522d;
-    border-radius: 10px;
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	background: #0f1511;
 }
 
-/* Override the submit button */
+.collectiq-input-container::after {
+	display: none;
+}
+
+.collectiq-input {
+	color: var(--text);
+	caret-color: var(--green);
+	font-family: inherit;
+	font-size: 0.92rem;
+	padding: 0.78rem;
+}
+
+.collectiq-input::placeholder {
+	color: rgba(127, 180, 149, 0.72);
+}
+
 .collectiq-submit-btn {
-    background: linear-gradient(45deg, #b8860b, #cd853f);
-    border-radius: 20px;
-    font-size: 1.2rem;
-    min-width: 100px;
-    max-width: 164px;
+	min-width: 104px;
+	max-width: 172px;
+	padding: 0.78rem 1.25rem;
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	background: var(--green);
+	color: #0b120e;
+	font-family: inherit;
+	font-size: 0.92rem;
+	font-weight: 700;
+	text-transform: lowercase;
 }
 
-/* Override button hover state */
 .collectiq-submit-btn:hover {
-    background: linear-gradient(45deg, #b8860b, #cd853f);
-    transform: translateY(-2px);
+	background: var(--amber);
 }
 
 .collectiq-submit-btn:active {
-    background: linear-gradient(45deg, #b8860b, #cd853f);
-    transform: translateY(0px);
+	background: var(--amber);
 }
 
 .email-form .collectiq-submit-btn .collectiq-backdrop {
-    display: none;
+	display: none;
 }
 
-/* Email form custom styling */
 .email-form {
-	background: rgba(205, 133, 63, 0.05);
-	border: 1px solid rgba(205, 133, 63, 0.2);
-	max-width: 500px;
-	padding: 40px 50px !important;
+	max-width: 520px;
+	padding: 26px 34px !important;
+	border: 1px solid var(--border);
+	border-radius: 2px !important;
+	background: var(--panel-strong);
 }
 
 .email-form h3 {
-	color: #cd853f;
-	font-size: 1.5rem;
-	font-weight: 500;
+	color: var(--amber);
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: lowercase;
 }
 
-/* Footer */
 .footer-img {
 	width: 178px;
 	height: 178px;
-	border: 1px solid #cd853f;
+	border: 1px solid var(--green);
+	filter: grayscale(1) contrast(1.18) sepia(0.35) hue-rotate(72deg) saturate(1.25);
+}
+
+footer {
+	border-top: 1px solid var(--border);
+	padding-top: 1rem;
 }
 
 footer p {
-	color: #a0522d;
+	color: var(--dim);
+	font-size: 0.82rem;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-	h1 {
-		font-size: 2.2rem;
+	body {
+		font-size: 14px;
+	}
+
+	.site-header {
+		min-height: 106px;
+		padding-right: 96px;
+	}
+
+	.site-title-block {
+		margin-left: 0 !important;
+	}
+
+	.navbar-img {
+		width: 78px;
+		height: 78px;
 	}
 
 	h2 {
-		font-size: 1.5rem;
+		font-size: 0.92rem;
 	}
 
 	li {
-		margin-bottom: 18px;
+		margin-bottom: 12px;
 	}
 
 	li a {
-		font-size: 1.25rem;
+		font-size: 0.95rem;
 	}
 
 	li p {
-		font-size: 1rem;
+		font-size: 0.88rem;
 	}
 
 	.footer-img {
@@ -180,11 +318,11 @@ footer p {
 	}
 
 	.email-form {
-		padding: 40px 30px !important;
+		padding: 24px 20px !important;
 	}
 
 	.email-form h3 {
-		font-size: 1.3rem;
+		font-size: 0.95rem;
 	}
 
 	.email-form form {
@@ -197,20 +335,42 @@ footer p {
 }
 
 @media (max-width: 480px) {
+	.container > .p-4 {
+		padding: 0.95rem !important;
+	}
+
+	.site-header {
+		min-height: 0;
+		padding: 12px 0 18px;
+	}
+
+	.navbar-img {
+		position: static !important;
+		display: block;
+		width: 72px;
+		height: 72px;
+		margin: 1rem 0 0;
+		transform: none !important;
+	}
+
 	h1 {
-		font-size: 1.8rem;
+		font-size: 1.72rem;
 	}
 
 	h2 {
-		font-size: 1.3rem;
+		font-size: 0.9rem;
+	}
+
+	li {
+		padding-left: 1.1rem;
 	}
 
 	li a {
-		font-size: 1.1rem;
+		font-size: 0.92rem;
 	}
 
 	li p {
-		font-size: 0.95rem;
+		font-size: 0.85rem;
 	}
 
 	.footer-img {

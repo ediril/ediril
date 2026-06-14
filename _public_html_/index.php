@@ -32,7 +32,7 @@ include '_partials/head.php';
                     echo '<a href="' . htmlspecialchars($note['url']) . '">' . htmlspecialchars($note['title']) . '</a>';
 
                     // Display date
-                    echo '<div class="fs-6" style="color: #a0522d;">' . htmlspecialchars($note['date']) . '</div>';
+                    echo '<div class="note-date fs-6">' . htmlspecialchars($note['date']) . '</div>';
 
                     // Display excerpt if available
                     if (!empty($note['excerpt'])) {
