@@ -51,11 +51,11 @@ include '_partials/head.php';
 	</div>
 
 	<div class="p-4 mb-4">
-        <h2 class="mb-3">RECENT PROJECTS</h2>
+        <h2 class="mb-3">PROJECTS</h2>
 		<div class="mb-0">
 			<ul class="list-unstyled">
 			<?php
-			$recentProjects = getProjects(4);
+			$recentProjects = getProjects();
 			foreach ($recentProjects as $project) {
 				echo '<li id="' . htmlspecialchars($project['id']) . '">';
 				echo '<a href="' . htmlspecialchars($project['url']) . '">' . htmlspecialchars($project['name']) . '</a>';
@@ -75,9 +75,6 @@ include '_partials/head.php';
 			}
 			?>
 			</ul>
-		</div>
-        <div class="d-flex align-items-baseline mb-4">
-			<a class="fs-4" href="projects.php">See All</a>
 		</div>
 	</div>
 

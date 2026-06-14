@@ -8,33 +8,12 @@
       "last_updated": "2026-05-18"
     },
     {
-      "id": "vodomodo",
-      "name": "Vodomodo",
-      "url": "https://vodomodo.com",
-      "description": "Edit videos with text commands",
-      "last_updated": null
-    },
-    {
-      "id": "notemodo",
-      "name": "Notemodo",
-      "url": "https://notemodo.com",
-      "description": "From Apple Notes to blog posts",
-      "last_updated": "2025-09-02"
-    },
-    {
       "id": "binge-worthy-shows",
       "name": "Binge-Worthy Shows",
       "url": "https://bingeworthyshows.tv",
       "description": "A curated list of binge-worthy shows on YouTube",
       "github_url": null,
       "last_updated": "2025-11-26"
-    },
-    {
-      "id": "founderfodder",
-      "name": "FounderFodder",
-      "url": "https://founderfodder.com",
-      "description": "Inspiration for founders, makers and tinkerers",
-      "last_updated": null
     },
     {
       "id": "chatgpt-conversation-exporter",
@@ -64,36 +43,6 @@
       "description": "Find your way of money",
       "github_url": "https://github.com/ediril/doshmodo-app",
       "last_updated": "2025-12-12"
-    },
-    {
-      "id": "banalytiq",
-      "name": "Banalytiq",
-      "url": "https://banalytiq.com",
-      "description": "A simple yet sufficient server-side analytics library",
-      "github_url": "https://github.com/ediril/banalytiq",
-      "last_updated": null
-    },
-    {
-      "id": "collectiq",
-      "name": "Collectiq",
-      "url": "https://github.com/ediril/collectiq",
-      "description": "Email address collection component",
-      "github_url": "https://github.com/ediril/collectiq",
-      "last_updated": null
-    },
-    {
-      "id": "reddswan",
-      "name": "ReddSwan",
-      "url": "https://reddswan.com",
-      "description": "Pros don't use GMail",
-      "last_updated": null
-    },
-    {
-      "id": "traqen",
-      "name": "Traqen",
-      "url": "https://traqen.com",
-      "description": "Track anything",
-      "last_updated": "2025-06-29"
     }
   ]
 }
