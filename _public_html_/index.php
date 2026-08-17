@@ -1,5 +1,4 @@
 <?php
-require_once '_collectiq/component/WaitlistComponent.php';
 require_once 'common.php';
 ?>
 
@@ -76,17 +75,9 @@ include '_partials/head.php';
 		</div>
 	</div>
 
-	<div class="d-flex justify-content-center my-5">
-		<div class="email-form p-4 rounded">
-			<h3 class="text-center mb-4">Let's keep in touch</h3>
-            <?php echo $waitlist->renderForm('Enter your email address'); ?>
-		</div>
-	</div>
-
 	<?php include '_partials/footer.php'; ?>
 </div>		
-    
-    <?php echo $waitlist->renderScripts(); ?>
+
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>

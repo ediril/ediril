@@ -197,69 +197,6 @@ a:hover {
 	color: var(--green) !important;
 }
 
-.collectiq-input-container {
-	border: 1px solid var(--border);
-	border-radius: 2px;
-	background: #0f1511;
-}
-
-.collectiq-input-container::after {
-	display: none;
-}
-
-.collectiq-input {
-	color: var(--text);
-	caret-color: var(--green);
-	font-family: inherit;
-	font-size: 0.92rem;
-	padding: 0.78rem;
-}
-
-.collectiq-input::placeholder {
-	color: rgba(127, 180, 149, 0.72);
-}
-
-.collectiq-submit-btn {
-	min-width: 104px;
-	max-width: 172px;
-	padding: 0.78rem 1.25rem;
-	border: 1px solid var(--border);
-	border-radius: 2px;
-	background: var(--green);
-	color: #0b120e;
-	font-family: inherit;
-	font-size: 0.92rem;
-	font-weight: 700;
-	text-transform: lowercase;
-}
-
-.collectiq-submit-btn:hover {
-	background: var(--amber);
-}
-
-.collectiq-submit-btn:active {
-	background: var(--amber);
-}
-
-.email-form .collectiq-submit-btn .collectiq-backdrop {
-	display: none;
-}
-
-.email-form {
-	max-width: 520px;
-	padding: 26px 34px !important;
-	border: 1px solid var(--border);
-	border-radius: 2px !important;
-	background: var(--panel-strong);
-}
-
-.email-form h3 {
-	color: var(--amber);
-	font-size: 1rem;
-	font-weight: 600;
-	text-transform: lowercase;
-}
-
 .footer-img {
 	width: 178px;
 	height: 178px;
@@ -330,21 +267,6 @@ footer p {
 		height: 140px;
 	}
 
-	.email-form {
-		padding: 24px 20px !important;
-	}
-
-	.email-form h3 {
-		font-size: 0.95rem;
-	}
-
-	.email-form form {
-		flex-direction: column;
-	}
-
-	.email-input {
-		max-width: 100% !important;
-	}
 }
 
 @media (max-width: 480px) {
