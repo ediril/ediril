@@ -1,7 +1,6 @@
 Options -Indexes
 
 RewriteEngine On
-RewriteRule ^_banalytiq(/|$) - [R=404,L]
 
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]

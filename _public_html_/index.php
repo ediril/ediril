@@ -1,8 +1,6 @@
 <?php
 require_once '_collectiq/component/WaitlistComponent.php';
-require_once __DIR__ . '/_banalytiq/banalytiq.php';
 require_once 'common.php';
-record_visit();
 ?>
 
 <!DOCTYPE HTML>
