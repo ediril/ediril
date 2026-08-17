@@ -5,11 +5,11 @@
       "name": "Million Minds",
       "url": "https://millionminds.one",
       "description": "Neuroscience-inspired AI Framework",
-      "last_updated": "2026-06-18"
+      "last_updated": "2026-07-18"
     },
     {
       "id": "binge-worthy",
-      "name": "Binge Worthy YouTube",
+      "name": "Curated Videos",
       "url": "https://emrahdiril.com/bingeworthy",
       "description": "A curated list of binge-worthy shows on YouTube",
       "github_url": null,
@@ -42,7 +42,7 @@
       "url": "https://doshmodo.com",
       "description": "Find your way of money",
       "github_url": null,
-      "last_updated": "2025-12-12"
+      "last_updated": "2026-07-12"
     }
   ]
 }
