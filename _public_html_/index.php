@@ -55,7 +55,13 @@ include '_partials/head.php';
 			$recentProjects = getProjects();
 			foreach ($recentProjects as $project) {
 				echo '<li id="' . htmlspecialchars($project['id']) . '">';
-				echo '<a href="' . htmlspecialchars($project['url']) . '">' . htmlspecialchars($project['name']) . '</a>';
+
+				// Projects still in private development may not have a public URL yet.
+				if (!empty($project['url'])) {
+					echo '<a href="' . htmlspecialchars($project['url']) . '">' . htmlspecialchars($project['name']) . '</a>';
+				} else {
+					echo '<span class="project-name">' . htmlspecialchars($project['name']) . '</span>';
+				}
 				
 				// Add GitHub link if available
 				if (isset($project['github_url']) && !empty($project['github_url'])) {

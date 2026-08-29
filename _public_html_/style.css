@@ -98,12 +98,6 @@ h2 {
 	font-size: 1.05rem;
 	font-weight: 600;
 	line-height: 1.2;
-	text-transform: lowercase;
-}
-
-h2::before {
-	content: '>';
-	color: var(--green);
 }
 
 h3 {
@@ -150,7 +144,8 @@ li::before {
 	font-size: 0.9rem;
 }
 
-li a {
+li a,
+.project-name {
 	color: var(--amber);
 	font-size: 0.98rem;
 	font-weight: 500;
@@ -205,7 +200,6 @@ a:hover {
 }
 
 footer {
-	border-top: 1px solid var(--border);
 	padding-top: 1rem;
 }
 
@@ -218,7 +212,7 @@ footer {
 }
 
 .container > .my-5 {
-	margin-top: 1.5rem !important;
+	margin-top: 2.25rem !important;
 	margin-bottom: 1.75rem !important;
 }
 
@@ -254,7 +248,8 @@ footer p {
 		margin-bottom: 12px;
 	}
 
-	li a {
+	li a,
+	.project-name {
 		font-size: 0.95rem;
 	}
 
@@ -301,7 +296,8 @@ footer p {
 		padding-left: 1.1rem;
 	}
 
-	li a {
+	li a,
+	.project-name {
 		font-size: 0.92rem;
 	}
 

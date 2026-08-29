@@ -1,40 +1,64 @@
 {
   "projects": [
     {
+      "id": "discovery-engine",
+      "name": "Discovery Engine",
+      "url": "https://emrahdiril.com/discovery/",
+      "description": "A human-curated search engine for worthwhile websites overlooked by popularity-driven rankings",
+      "github_url": "https://github.com/ediril/dengine-app",
+      "last_updated": "2026-08-29"
+    },
+    {
+      "id": "hook-line-sync",
+      "name": "Hook Line Sync",
+      "url": "https://emrahdiril.com/hlsync/",
+      "description": "A safer command-line workflow for deploying local projects to shared hosting over FTPS",
+      "github_url": "https://github.com/ediril/hook-line-sync",
+      "last_updated": "2026-08-29"
+    },
+    {
+      "id": "pluckso",
+      "name": "Pluckso",
+      "url": null,
+      "description": "Finds shareable ideas and insights buried in local coding-agent conversations using Apple's on-device AI",
+      "github_url": null,
+      "last_updated": "2026-08-26"
+    },
+    {
       "id": "millionminds",
       "name": "Million Minds",
       "url": "https://millionminds.one",
       "description": "Neuroscience-inspired AI Framework",
-      "last_updated": "2026-07-18"
+      "last_updated": "2026-08-29"
     },
     {
       "id": "binge-worthy",
-      "name": "Curated Videos",
+      "name": "Worthy Channels",
       "url": "https://emrahdiril.com/bingeworthy",
-      "description": "A curated list of binge-worthy shows on YouTube",
+      "description": "A curated list of worthy channels on YouTube",
       "github_url": null,
-      "last_updated": "2025-11-26"
+      "last_updated": "2026-08-16"
     },
     {
       "id": "chatgpt-conversation-exporter",
       "name": "ChatGPT Conversation Exporter",
       "url": "https://emrahdiril.com/chatgpt-export",
       "description": "Export your ChatGPT conversations as clean PDFs or HTML",
-      "last_updated": "2025-11-23"
+      "last_updated": "2026-07-01"
     },
     {
       "id": "claude-conversation-exporter",
       "name": "Claude Conversation Exporter",
       "url": "https://emrahdiril.com/claude-export",
       "description": "Export your Claude conversations as clean PDFs or HTML",
-      "last_updated": "2026-05-25"
+      "last_updated": "2026-05-24"
     },
     {
       "id": "scrubbler",
       "name": "Scrubbler",
       "url": "https://emrahdiril.com/scrubbler",
       "description": "A special video player that makes it easier to learn piano pieces via synesthesia videos on YouTube",
-      "last_updated": "2025-06-20"
+      "last_updated": "2025-06-05"
     },
     {
       "id": "doshmodo",
@@ -42,7 +66,7 @@
       "url": "https://doshmodo.com",
       "description": "Find your way of money",
       "github_url": null,
-      "last_updated": "2026-07-12"
+      "last_updated": "2026-08-29"
     }
   ]
 }
