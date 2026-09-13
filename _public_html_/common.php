@@ -110,7 +110,14 @@ function getRecentNotes($limit = 3) {
         . '?per_page=' . $limit
         . '&_fields=id,link,title,excerpt,date';
 
-    $response = @file_get_contents($apiUrl);
+    // Keep an unavailable notes API from holding up the entire homepage.
+    $context = stream_context_create([
+        'http' => [
+            'timeout' => 2.0,
+            'follow_location' => 0,
+        ],
+    ]);
+    $response = @file_get_contents($apiUrl, false, $context);
     if ($response === false) {
         error_log("Failed to fetch recent notes from REST API: $apiUrl");
         return $notes;
@@ -147,4 +154,3 @@ function getRecentNotes($limit = 3) {
 
     return $notes;
 }
-
