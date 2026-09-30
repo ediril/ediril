@@ -1,14 +1,6 @@
 {
   "projects": [
     {
-      "id": "discovery-engine",
-      "name": "Discovery Engine",
-      "url": "https://emrahdiril.com/discovery/",
-      "description": "A human-curated search engine for worthwhile websites overlooked by popularity-driven rankings",
-      "github_url": "https://github.com/ediril/dengine-app",
-      "last_updated": "2026-08-29"
-    },
-    {
       "id": "hook-line-sync",
       "name": "Hook Line Sync",
       "url": "https://emrahdiril.com/hlsync/",
@@ -20,24 +12,16 @@
       "id": "pluckso",
       "name": "Pluckso",
       "url": null,
-      "description": "Finds shareable ideas and insights buried in local coding-agent conversations using Apple's on-device AI",
+      "description": "Work on your codebase together with AI",
       "github_url": null,
       "last_updated": "2026-08-26"
     },
     {
       "id": "millionminds",
-      "name": "Million Minds",
+      "name": "Million Minds AI",
       "url": "https://millionminds.one",
       "description": "Neuroscience-inspired AI Framework",
       "last_updated": "2026-08-29"
-    },
-    {
-      "id": "binge-worthy",
-      "name": "Worthy Channels",
-      "url": "https://emrahdiril.com/bingeworthy",
-      "description": "A curated list of worthy channels on YouTube",
-      "github_url": null,
-      "last_updated": "2026-08-16"
     },
     {
       "id": "chatgpt-conversation-exporter",
