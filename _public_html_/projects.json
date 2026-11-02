@@ -43,6 +43,7 @@
       "id": "chatgpt-conversation-exporter",
       "name": "ChatGPT Conversation Exporter",
       "url": "https://emrahdiril.com/chatgpt-export",
+      "github_url": "https://github.com/ediril/ai-chat-exporter/tree/main/chatgpt-export",
       "description": "Export your ChatGPT conversations as clean PDFs or HTML",
       "last_updated": "2026-07-01"
     },
@@ -50,6 +51,7 @@
       "id": "claude-conversation-exporter",
       "name": "Claude Conversation Exporter",
       "url": "https://emrahdiril.com/claude-export",
+      "github_url": "https://github.com/ediril/ai-chat-exporter/tree/main/claude-export",
       "description": "Export your Claude conversations as clean PDFs or HTML",
       "last_updated": "2026-05-24"
     },
