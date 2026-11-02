@@ -1,27 +1,43 @@
 {
   "projects": [
     {
-      "id": "hook-line-sync",
-      "name": "Hook Line Sync",
-      "url": "https://emrahdiril.com/hlsync/",
+      "id": "wpsync",
+      "name": "WPSync",
+      "url": null,
+      "description": "Manage WordPress posts as local Markdown files: pull, edit, preview changes, and push from the command line",
+      "github_url": null,
+      "last_updated": "2026-11-01"
+    },
+    {
+      "id": "qubotu",
+      "name": "Qubotu",
+      "url": "https://qubotu.com",
+      "description": "A personal team of AI agents that runs locally, works on a schedule, and shares results in your browser",
+      "github_url": null,
+      "last_updated": "2026-11-01"
+    },
+    {
+      "id": "hlsync",
+      "name": "HLSync",
+      "url": "https://hlsync.com",
       "description": "A safer command-line workflow for deploying local projects to shared hosting over FTPS",
-      "github_url": "https://github.com/ediril/hook-line-sync",
-      "last_updated": "2026-08-29"
+      "github_url": "https://github.com/ediril/hlsync",
+      "last_updated": "2026-11-01"
     },
     {
       "id": "pluckso",
       "name": "Pluckso",
       "url": null,
-      "description": "Work on your codebase together with AI",
+      "description": "A personal AI agent that helps you stay on top of your notifications",
       "github_url": null,
-      "last_updated": "2026-08-26"
+      "last_updated": "2026-11-01"
     },
     {
       "id": "millionminds",
       "name": "Million Minds AI",
       "url": "https://millionminds.one",
       "description": "Neuroscience-inspired AI Framework",
-      "last_updated": "2026-10-04"
+      "last_updated": "2026-11-02"
     },
     {
       "id": "chatgpt-conversation-exporter",
