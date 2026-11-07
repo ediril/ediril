@@ -55,11 +55,13 @@ include '_partials/head.php';
 	<?php if ($galleryFolder !== null): ?>
 	<div class="p-4 mb-5">
 		<h2 class="mb-3">GALLERY</h2>
-		<a class="gallery-strip mb-3" href="/gallery/" aria-label="Open the gallery">
+		<div class="gallery-strip mb-3">
 			<?php foreach (array_slice($galleryGroups[$galleryFolder], 0, 4) as $file): ?>
-			<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="" loading="lazy">
+			<a href="/gallery/<?php echo htmlspecialchars(gallery_page_path($galleryFolder, $file)); ?>">
+				<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="<?php echo htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)); ?>" loading="lazy">
+			</a>
 			<?php endforeach; ?>
-		</a>
+		</div>
 		<div class="d-flex align-items-baseline">
 			<a class="fs-4" href="/gallery/">See All</a>
 		</div>

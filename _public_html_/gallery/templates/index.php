@@ -37,13 +37,10 @@ include 'partials/header.php';
         <div class="mb-3">
             <ul class="nav nav-pills" style="background: linear-gradient(135deg, rgba(13,110,253,0.1), rgba(220,53,69,0.1)); border-radius: 15px; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: fit-content;">
                 <?php foreach ($groups as $group_name => $group_items): ?>
-                    <?php
-                    $is_active = ($group_name === $current_group);
-                    $group_url = ($group_name === $default_group) ? BASE : BASE . '?g=' . urlencode($group_name);
-                    ?>
+                    <?php $is_active = ($group_name === $current_group); ?>
                     <li class="nav-item">
                         <a class="nav-link <?php echo $is_active ? 'active' : ''; ?>" 
-                           href="<?php echo $group_url; ?>"
+                           href="<?php echo escape_html(grid_url($group_name, 1)); ?>"
                            style="<?php if ($is_active): ?>
                                     background: linear-gradient(135deg, #0d6efd, #dc3545) !important; 
                                     color: white !important; 
@@ -83,14 +80,13 @@ include 'partials/header.php';
             <?php else: ?>
                 <?php foreach ($images as $image): ?>
                 <div class="col-4">
-                    <div class="grid-item">
+                    <a class="grid-item" href="<?php echo escape_html($image['href']); ?>">
                         <div class="grid-item__wrapper">
                             <img src="<?php echo escape_html($image['src']); ?>"
-                                 alt="<?php echo escape_html($image['alt']); ?>" 
+                                 alt="<?php echo escape_html($image['alt']); ?>"
                                  class="grid-item__image">
-                            
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             <?php endif; ?>
@@ -99,28 +95,11 @@ include 'partials/header.php';
         <!-- Show More Button -->
         <?php if ($current_page < $total_pages): ?>
         <div class="text-center mt-4 mb-5">
-            <button id="showMoreBtn" class="btn btn-primary btn-lg px-5"
-                    data-next-page="<?php echo $current_page + 1; ?>"
-                    data-group="<?php echo $current_group === $default_group ? '' : escape_html($current_group); ?>">Show More Art</button>
+            <a id="showMoreBtn" class="btn btn-primary btn-lg px-5"
+               href="<?php echo escape_html(grid_url($current_group, $current_page + 1)); ?>">Show More Art</a>
         </div>
         <?php endif; ?>
     </div>
 </main>
-
-<!-- Image Modal -->
-<div id="imageModal" class="image-modal" style="display: none;">
-    <div class="image-modal__backdrop"></div>
-    <div class="image-modal__container">
-        <button class="image-modal__fullscreen" aria-label="Fullscreen">
-            <i class="fas fa-expand"></i>
-        </button>
-        <button class="image-modal__close" aria-label="Close">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <img class="image-modal__image" src="" alt="">
-        <div class="image-modal__caption"></div>
-    </div>
-</div>
 
 <?php include 'partials/footer.php'; ?>

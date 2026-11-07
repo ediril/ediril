@@ -191,7 +191,7 @@ li p {
 	transition: border-color 0.15s ease;
 }
 
-.gallery-strip:hover img {
+.gallery-strip a:hover img {
 	border-color: var(--green);
 }
 
