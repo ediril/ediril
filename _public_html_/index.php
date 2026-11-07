@@ -83,7 +83,5 @@ include '_partials/head.php';
 
 	<?php include '_partials/footer.php'; ?>
 </div>		
-
-    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
