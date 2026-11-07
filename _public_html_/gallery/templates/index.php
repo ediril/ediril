@@ -68,7 +68,7 @@ include 'partials/header.php';
         <?php endif; ?>
         
         <!-- Image Grid -->
-        <div class="row g-3 my-3" id="imageGrid">
+        <div class="row g-1 g-sm-3 my-3" id="imageGrid">
             <?php if (empty($images)): ?>
                 <!-- Empty State -->
                 <div class="col-12">

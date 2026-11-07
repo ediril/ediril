@@ -33,10 +33,6 @@ body {
     margin: 0 auto;
 }
 
-#imageGrid .col-4 {
-    margin-bottom: 10px;
-}
-
 .grid-item {
     display: block;
     position: relative;
@@ -192,13 +188,43 @@ body {
         padding-right: 5px;
     }
 
+    /* Phones: the image takes the full width and Previous/Next float over its edges (swiping also works) */
     .image-stage {
-        gap: 0.35rem;
-        padding-inline: 0.35rem;
+        position: relative;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0.5rem 0.35rem;
+    }
+
+    .image-stage__image {
+        grid-row: 1;
+        grid-column: 1;
     }
 
     .image-stage__nav {
-        width: 2.25rem;
-        height: 2.25rem;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        width: 2.5rem;
+        height: 2.5rem;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.75);
+    }
+
+    .image-stage__nav:hover {
+        transform: translateY(-50%);
+    }
+
+    .image-stage__nav[rel="prev"],
+    .image-stage__nav:first-child {
+        left: 0.75rem;
+    }
+
+    .image-stage__nav[rel="next"],
+    .image-stage__nav:last-child {
+        right: 0.75rem;
+    }
+
+    .image-stage__nav.disabled {
+        display: none;
     }
 }
