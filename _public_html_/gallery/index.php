@@ -1,8 +1,7 @@
 <?php
-// Each folder in static/ is a gallery tab; images sort by filename in reverse natural order (206_… before 10_… before 2_…).
+require_once __DIR__ . '/images.php';
 
 const IMAGES_PER_PAGE = 9;
-const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
 define('BASE', rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/');
 
@@ -18,22 +17,6 @@ function group_label($folder) {
     return ucwords(str_replace(['-', '_'], ' ', $folder));
 }
 
-function load_groups() {
-    $groups = [];
-    foreach (glob(__DIR__ . '/static/*', GLOB_ONLYDIR) as $dir) {
-        $files = array_filter(scandir($dir), fn($file) => $file[0] !== '.'
-            && in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), IMAGE_EXTENSIONS, true));
-        usort($files, fn($a, $b) => strnatcasecmp($b, $a));
-        if ($files) {
-            $groups[basename($dir)] = array_map(fn($file) => [
-                'src' => BASE . 'static/' . rawurlencode(basename($dir)) . '/' . rawurlencode($file),
-                'alt' => pathinfo($file, PATHINFO_FILENAME),
-            ], $files);
-        }
-    }
-    return $groups;
-}
-
 $request_path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 if ($request_path === rtrim(BASE, '/')) {
     $query = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
@@ -47,13 +30,16 @@ if ($request_path !== BASE && $request_path !== BASE . 'index.php') {
     exit;
 }
 
-$groups = load_groups();
+$groups = gallery_groups();
 $default_group = array_key_first($groups);
 $current_group = array_key_exists($_GET['g'] ?? '', $groups) ? $_GET['g'] : $default_group;
-$group_images = $current_group === null ? [] : $groups[$current_group];
+$group_files = $current_group === null ? [] : $groups[$current_group];
 
-$total_pages = (int) ceil(count($group_images) / IMAGES_PER_PAGE);
+$total_pages = (int) ceil(count($group_files) / IMAGES_PER_PAGE);
 $current_page = max(1, (int) ($_GET['page'] ?? 1));
-$images = array_slice($group_images, ($current_page - 1) * IMAGES_PER_PAGE, IMAGES_PER_PAGE);
+$images = array_map(fn($file) => [
+    'src' => BASE . gallery_image_path($current_group, $file),
+    'alt' => pathinfo($file, PATHINFO_FILENAME),
+], array_slice($group_files, ($current_page - 1) * IMAGES_PER_PAGE, IMAGES_PER_PAGE));
 
 include __DIR__ . '/templates/index.php';

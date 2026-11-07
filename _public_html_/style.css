@@ -175,6 +175,26 @@ li p {
 	color: var(--muted);
 }
 
+.gallery-strip {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.5rem;
+}
+
+.gallery-strip img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	transition: border-color 0.15s ease;
+}
+
+.gallery-strip:hover img {
+	border-color: var(--green);
+}
+
 a {
 	color: var(--amber);
 	text-decoration: none;

@@ -1,5 +1,6 @@
 <?php
 require_once 'common.php';
+require_once 'gallery/images.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -46,6 +47,24 @@ include '_partials/head.php';
 			<a class="fs-4" href="/notes">See All</a>
 		</div>
 	</div>
+
+	<?php
+	$galleryGroups = gallery_groups();
+	$galleryFolder = array_key_first($galleryGroups);
+	?>
+	<?php if ($galleryFolder !== null): ?>
+	<div class="p-4 mb-5">
+		<h2 class="mb-3">GALLERY</h2>
+		<a class="gallery-strip mb-3" href="/gallery/" aria-label="Open the gallery">
+			<?php foreach (array_slice($galleryGroups[$galleryFolder], 0, 4) as $file): ?>
+			<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="" loading="lazy">
+			<?php endforeach; ?>
+		</a>
+		<div class="d-flex align-items-baseline">
+			<a class="fs-4" href="/gallery/">See All</a>
+		</div>
+	</div>
+	<?php endif; ?>
 
 	<div class="p-4 mb-4">
         <h2 class="mb-3">PROJECTS</h2>
