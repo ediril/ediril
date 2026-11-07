@@ -92,47 +92,74 @@ body {
     transform: translateY(0);
 }
 
-/* Image page */
-.image-page {
-    padding-block: 1rem;
+/* Image page: a slim bar on top, then the image as large as the window allows with Previous/Next at its sides */
+.image-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    color: white;
 }
 
-.image-page__back {
-    display: inline-block;
-    margin-bottom: 0.75rem;
-    color: #262626;
-    font-weight: 500;
+.image-bar__back {
+    color: white;
+    font-weight: 600;
     text-decoration: none;
 }
 
-.image-page__back:hover {
+.image-bar__back:hover {
+    color: white;
     text-decoration: underline;
 }
 
-.image-page__figure {
-    display: flex;
-    justify-content: center;
-    margin: 0;
+.image-bar__position {
+    font-variant-numeric: tabular-nums;
+    opacity: 0.9;
 }
 
-/* Width is set inline from the image's aspect ratio so it fills the viewport height or the container width, whichever is smaller. */
-.image-page__image {
+.image-stage {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem 1rem;
+}
+
+/* Width is set inline from the image's aspect ratio so it fills the window height or the available width, whichever is smaller.
+   The 5.5rem it leaves is the bar plus the stage padding. */
+.image-stage__image {
+    justify-self: center;
     display: block;
+    max-width: 100%;
     height: auto;
     border-radius: 3px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-.image-nav {
+.image-stage__nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 935px;
-    margin: 1rem auto 0;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: white;
+    color: #262626;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.image-nav__position {
-    font-variant-numeric: tabular-nums;
+.image-stage__nav:hover {
+    color: #262626;
+    transform: scale(1.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.image-stage__nav.disabled {
+    opacity: 0.3;
+    box-shadow: none;
 }
 
 /* Footer */
@@ -143,8 +170,8 @@ body {
 }
 
 .grid-item:focus-visible,
-.image-nav a:focus-visible,
-.image-page__back:focus-visible {
+.image-stage__nav:focus-visible,
+.image-bar__back:focus-visible {
     outline: 2px solid #0095f6;
     outline-offset: 2px;
 }
@@ -163,5 +190,15 @@ body {
     .container {
         padding-left: 5px;
         padding-right: 5px;
+    }
+
+    .image-stage {
+        gap: 0.35rem;
+        padding-inline: 0.35rem;
+    }
+
+    .image-stage__nav {
+        width: 2.25rem;
+        height: 2.25rem;
     }
 }
