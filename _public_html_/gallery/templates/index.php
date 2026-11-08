@@ -35,7 +35,7 @@ include 'partials/header.php';
         <!-- Group Tabs (only show if more than one group has images) -->
         <?php if (count($groups) > 1): ?>
         <div class="mb-3">
-            <ul class="nav nav-pills" style="background: linear-gradient(135deg, rgba(13,110,253,0.1), rgba(220,53,69,0.1)); border-radius: 15px; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: fit-content;">
+            <ul class="nav nav-pills mx-auto" style="background: linear-gradient(135deg, rgba(13,110,253,0.1), rgba(220,53,69,0.1)); border-radius: 15px; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: fit-content;">
                 <?php foreach ($groups as $group_name => $group_items): ?>
                     <?php $is_active = ($group_name === $current_group); ?>
                     <li class="nav-item">
