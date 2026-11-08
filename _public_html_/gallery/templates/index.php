@@ -84,7 +84,7 @@ include 'partials/header.php';
                         <div class="grid-item__wrapper">
                             <img src="<?php echo escape_html($image['src']); ?>"
                                  alt="<?php echo escape_html($image['alt']); ?>"
-                                 class="grid-item__image">
+                                 class="grid-item__image<?php echo $image['flipped'] ? ' is-flipped' : ''; ?>">
                         </div>
                     </a>
                 </div>

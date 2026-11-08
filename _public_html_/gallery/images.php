@@ -32,6 +32,14 @@ function gallery_image_path($folder, $file) {
     return 'static/' . rawurlencode($folder) . '/' . rawurlencode($file);
 }
 
+// About this share of images are shown mirrored, for variety. The filename decides, so an image is
+// flipped the same way in the grid, on its page, on the front page, and on every visit.
+const GALLERY_FLIP_PERCENT = 30;
+
+function gallery_is_flipped($file) {
+    return crc32(pathinfo($file, PATHINFO_FILENAME)) % 100 < GALLERY_FLIP_PERCENT;
+}
+
 // URL path of an image's own page relative to the gallery root, e.g. abstract/206_s0.77_7b530af9.
 function gallery_page_path($folder, $file) {
     return rawurlencode($folder) . '/' . rawurlencode(pathinfo($file, PATHINFO_FILENAME));

@@ -58,7 +58,7 @@ include '_partials/head.php';
 		<div class="gallery-strip mb-3">
 			<?php foreach (array_slice($galleryGroups[$galleryFolder], 0, 4) as $file): ?>
 			<a href="/gallery/<?php echo htmlspecialchars(gallery_page_path($galleryFolder, $file)); ?>">
-				<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="<?php echo htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)); ?>" loading="lazy">
+				<img class="<?php echo gallery_is_flipped($file) ? 'is-flipped' : ''; ?>" src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="<?php echo htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)); ?>" loading="lazy">
 			</a>
 			<?php endforeach; ?>
 		</div>
