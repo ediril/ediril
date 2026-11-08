@@ -191,10 +191,6 @@ li p {
 	transition: border-color 0.15s ease;
 }
 
-.gallery-strip img.is-flipped {
-	transform: scaleX(-1);
-}
-
 .gallery-strip a:hover img {
 	border-color: var(--green);
 }

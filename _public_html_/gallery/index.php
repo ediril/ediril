@@ -60,7 +60,6 @@ if ($segments === [''] || $segments === ['index.php']) {
         'src' => BASE . gallery_image_path($current_group, $file),
         'href' => BASE . gallery_page_path($current_group, $file),
         'alt' => pathinfo($file, PATHINFO_FILENAME),
-        'flipped' => gallery_is_flipped($file),
     ], array_slice($group_files, ($current_page - 1) * IMAGES_PER_PAGE, IMAGES_PER_PAGE));
 
     include __DIR__ . '/templates/index.php';
@@ -88,7 +87,6 @@ $file = $files[$index];
 $image = [
     'src' => BASE . gallery_image_path($folder, $file),
     'alt' => pathinfo($file, PATHINFO_FILENAME),
-    'flipped' => gallery_is_flipped($file),
     'position' => $index + 1,
     'count' => count($files),
 ];

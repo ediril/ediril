@@ -16,7 +16,7 @@
         <span class="image-stage__nav disabled" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
     <?php endif; ?>
 
-    <img class="image-stage__image<?php echo $image['flipped'] ? ' is-flipped' : ''; ?>"
+    <img class="image-stage__image"
          src="<?php echo escape_html($image['src']); ?>"
          alt="<?php echo escape_html($image['alt']); ?>"
          width="<?php echo $image['width']; ?>"

@@ -67,15 +67,6 @@ body {
     transform: scale(1.03);
 }
 
-/* Mirrored images (see gallery_is_flipped); the hover zoom has to keep the flip */
-.is-flipped {
-    transform: scaleX(-1);
-}
-
-.grid-item:hover .grid-item__image.is-flipped {
-    transform: scaleX(-1) scale(1.03);
-}
-
 #showMoreBtn {
     background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
     border: none;
