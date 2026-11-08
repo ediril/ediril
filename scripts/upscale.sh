@@ -7,13 +7,14 @@
 #   image           a path, a path inside the gallery's static folder (abstract/x.jpg),
 #                   or just a filename (x.jpg), which is looked up in every gallery folder
 #   -s scale        2, 3 or 4 (default 3)
-#   -m model        digital-art (default), upscayl-standard, upscayl-lite, ultrasharp, high-fidelity, remacri, ultramix-balanced
-#   -c compression  WebP lossy level from 0 (lossless, ~2.7 MB at 3x) to 100 (default 20, ~350 KB at 3x)
+#   -m model        high-fidelity (default, keeps fine detail), digital-art (smoother), remacri, upscayl-standard,
+#                   ultrasharp, ultramix-balanced, upscayl-lite
+#   -c compression  WebP lossy level from 0 (lossless, ~2.7 MB at 3x) to 100 (default 5; 20 is ~350 KB but blurs fine detail)
 #
 # Examples:
 #   scripts/upscale.sh abstract/432_i1_f1b7fdd6_s0.84_52d560_2c84ac.jpg
 #   scripts/upscale.sh -s 2 432_i1_f1b7fdd6_s0.84_52d560_2c84ac.jpg
-#   scripts/upscale.sh -m ultrasharp _public_html_/gallery/static/drawings/*.jpg
+#   scripts/upscale.sh -m digital-art _public_html_/gallery/static/drawings/*.jpg
 #
 # Images that already have an upscaled copy at that scale are skipped, as are the upscaled copies themselves.
 set -euo pipefail
@@ -22,8 +23,8 @@ shopt -s nullglob
 UPSCAYL=/Applications/Upscayl.app/Contents/Resources
 STATIC="$(cd "$(dirname "$0")/.." && pwd)/_public_html_/gallery/static"
 scale=3
-model=digital-art
-compression=20
+model=high-fidelity
+compression=5
 
 usage() {
     awk 'NR == 1 { next } /^#/ { sub(/^# ?/, ""); print; next } { exit }' "$0"
