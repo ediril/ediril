@@ -6,7 +6,7 @@
 # Usage: scripts/upscale.sh [-s scale] [-m model] [-c compression] image...
 #   image           a path, a path inside the gallery's static folder (abstract/x.jpg),
 #                   or just a filename (x.jpg), which is looked up in every gallery folder
-#   -s scale        2, 3 or 4 (default 3)
+#   -s scale        2, 3 or 4 (default 2)
 #   -m model        high-fidelity (default, keeps fine detail), digital-art (smoother), remacri, upscayl-standard,
 #                   ultrasharp, ultramix-balanced, upscayl-lite
 #   -c compression  WebP lossy level from 0 (lossless, ~2.7 MB at 3x) to 100 (default 5; 20 is ~350 KB but blurs fine detail)
@@ -23,7 +23,7 @@ shopt -s nullglob
 
 UPSCAYL=/Applications/Upscayl.app/Contents/Resources
 STATIC="$(cd "$(dirname "$0")/.." && pwd)/_public_html_/gallery/static"
-scale=3
+scale=2
 model=high-fidelity
 compression=5
 MAX_SIZE=512
