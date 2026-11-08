@@ -16,7 +16,8 @@
 #   scripts/upscale.sh -s 2 432_i1_f1b7fdd6_s0.84_52d560_2c84ac.jpg
 #   scripts/upscale.sh -m digital-art _public_html_/gallery/static/drawings/*.jpg
 #
-# Images that already have an upscaled copy at that scale are skipped, as are the upscaled copies themselves.
+# Images that already have an upscaled copy at that scale are skipped, as are the upscaled copies themselves
+# and images already larger than MAX_SIZE (512 px) on both sides.
 set -euo pipefail
 shopt -s nullglob
 
@@ -25,6 +26,7 @@ STATIC="$(cd "$(dirname "$0")/.." && pwd)/_public_html_/gallery/static"
 scale=3
 model=high-fidelity
 compression=5
+MAX_SIZE=512
 
 usage() {
     awk 'NR == 1 { next } /^#/ { sub(/^# ?/, ""); print; next } { exit }' "$0"
@@ -88,6 +90,11 @@ for arg in "$@"; do
         jpg|jpeg|png|webp) ;;
         *) echo "skipping $image (only jpg, png and webp can be upscaled)" >&2; continue ;;
     esac
+    read -r width height <<< "$(sips -g pixelWidth -g pixelHeight "$image" | awk '/pixel/ { printf "%s ", $2 }')"
+    if (( width > MAX_SIZE && height > MAX_SIZE )); then
+        echo "skipping $image (already ${width}x${height})"
+        continue
+    fi
     out="$name@${scale}x.webp"
     if [[ -e $out ]]; then
         echo "exists   $out"
