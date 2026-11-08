@@ -16,7 +16,7 @@ include '_partials/head.php';
 	<?php include '_partials/header.php'; ?>
 
     <div class="p-4 mb-5">
-        <h2 class="mb-3">RECENT NOTES</h2>
+        <h2 class="mb-3"><a href="/notes">NOTES <i class="fa-solid fa-angle-right"></i></a></h2>
 		<div class="mb-0">
             <?php
             $notes = getRecentNotes(4);
@@ -43,9 +43,6 @@ include '_partials/head.php';
             }
             ?>
 		</div>
-        <div class="d-flex align-items-baseline">
-			<a class="fs-4" href="/notes">See All</a>
-		</div>
 	</div>
 
 	<?php
@@ -54,16 +51,13 @@ include '_partials/head.php';
 	?>
 	<?php if ($galleryFolder !== null): ?>
 	<div class="p-4 mb-5">
-		<h2 class="mb-3">GALLERY</h2>
-		<div class="gallery-strip mb-3">
+		<h2 class="mb-3"><a href="/gallery/">GALLERY <i class="fa-solid fa-angle-right"></i></a></h2>
+		<div class="gallery-strip">
 			<?php foreach (array_slice($galleryGroups[$galleryFolder], 0, 4) as $file): ?>
 			<a href="/gallery/<?php echo htmlspecialchars(gallery_page_path($galleryFolder, $file)); ?>">
 				<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="<?php echo htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)); ?>" loading="lazy">
 			</a>
 			<?php endforeach; ?>
-		</div>
-		<div class="d-flex align-items-baseline">
-			<a class="fs-4" href="/gallery/">See All</a>
 		</div>
 	</div>
 	<?php endif; ?>
