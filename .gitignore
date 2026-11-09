@@ -1,6 +1,7 @@
 social-icons/
 notes*/
-blog/
+.wpsync/
+.obsidian/
 twitter*/
 tweets/*.db
 tweets/*.zip
