@@ -7,4 +7,4 @@ else
   port=$1
 fi
 
-php -S localhost:$port
+php -S localhost:$port -t "$(dirname "$0")/../_public_html_"
