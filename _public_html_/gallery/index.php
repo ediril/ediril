@@ -17,12 +17,24 @@ function group_label($folder) {
     return ucwords(str_replace(['-', '_'], ' ', $folder));
 }
 
-function grid_url($folder, $page) {
+function grid_url($folder, $page, $shuffle = SHUFFLE) {
     $query = array_filter([
         'g' => $folder === DEFAULT_GROUP ? null : $folder,
         'page' => $page > 1 ? $page : null,
+        'shuffle' => $shuffle ?? 'off',
     ]);
     return BASE . ($query ? '?' . http_build_query($query) : '');
+}
+
+function page_url($folder, $file) {
+    return BASE . gallery_page_path($folder, $file) . '?shuffle=' . (SHUFFLE ?? 'off');
+}
+
+// Same seed, same order, so a shuffled visit can page back and forth through one random order.
+function shuffled($files, $seed) {
+    $keys = array_map(fn($file) => md5("$seed/$file"), $files);
+    array_multisort($keys, $files);
+    return $files;
 }
 
 function redirect($url) {
@@ -47,7 +59,16 @@ if (!str_starts_with($request_path, BASE)) {
 }
 $segments = array_map('rawurldecode', explode('/', rtrim(substr($request_path, strlen(BASE)), '/')));
 
+// Shuffled by default: a visit without a seed gets a fresh one, and ?shuffle=off keeps the filename order.
+define('SHUFFLE', match (true) {
+    ($_GET['shuffle'] ?? null) === 'off' => null,
+    (bool) preg_match('/^[1-9]\d{0,8}$/', $_GET['shuffle'] ?? '') => $_GET['shuffle'],
+    default => (string) random_int(1, 999999999),
+});
 $groups = gallery_groups();
+if (SHUFFLE) {
+    $groups = array_map(fn($files) => shuffled($files, SHUFFLE), $groups);
+}
 define('DEFAULT_GROUP', array_key_first($groups));
 
 if ($segments === [''] || $segments === ['index.php']) {
@@ -58,7 +79,7 @@ if ($segments === [''] || $segments === ['index.php']) {
     $current_page = max(1, (int) ($_GET['page'] ?? 1));
     $images = array_map(fn($file) => [
         'src' => BASE . gallery_image_path($current_group, $file),
-        'href' => BASE . gallery_page_path($current_group, $file),
+        'href' => page_url($current_group, $file),
         'alt' => pathinfo($file, PATHINFO_FILENAME),
     ], array_slice($group_files, ($current_page - 1) * IMAGES_PER_PAGE, IMAGES_PER_PAGE));
 
@@ -92,8 +113,8 @@ $image = [
 ];
 [$image['width'], $image['height']] = getimagesize(__DIR__ . "/static/$folder/$file") ?: [1, 1];
 
-$prev_url = isset($files[$index - 1]) ? BASE . gallery_page_path($folder, $files[$index - 1]) : null;
-$next_url = isset($files[$index + 1]) ? BASE . gallery_page_path($folder, $files[$index + 1]) : null;
+$prev_url = isset($files[$index - 1]) ? page_url($folder, $files[$index - 1]) : null;
+$next_url = isset($files[$index + 1]) ? page_url($folder, $files[$index + 1]) : null;
 $next_image_src = isset($files[$index + 1]) ? BASE . gallery_image_path($folder, $files[$index + 1]) : null;
 $back_url = grid_url($folder, intdiv($index, IMAGES_PER_PAGE) + 1);
 

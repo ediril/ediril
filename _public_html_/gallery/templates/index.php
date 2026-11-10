@@ -32,10 +32,10 @@ include 'partials/header.php';
 <!-- Main Content -->
 <main class="main-content">
     <div class="container">
+        <div class="d-flex flex-wrap justify-content-center align-items-start gap-2 mb-3">
         <!-- Group Tabs (only show if more than one group has images) -->
         <?php if (count($groups) > 1): ?>
-        <div class="mb-3">
-            <ul class="nav nav-pills mx-auto" style="background: linear-gradient(135deg, rgba(13,110,253,0.1), rgba(220,53,69,0.1)); border-radius: 15px; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: fit-content;">
+            <ul class="nav nav-pills" style="background: linear-gradient(135deg, rgba(13,110,253,0.1), rgba(220,53,69,0.1)); border-radius: 15px; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: fit-content;">
                 <?php foreach ($groups as $group_name => $group_items): ?>
                     <?php $is_active = ($group_name === $current_group); ?>
                     <li class="nav-item">
@@ -64,8 +64,31 @@ include 'partials/header.php';
                     </li>
                 <?php endforeach; ?>
             </ul>
-        </div>
         <?php endif; ?>
+            <ul class="nav nav-pills" style="background: linear-gradient(135deg, rgba(13,110,253,0.1), rgba(220,53,69,0.1)); border-radius: 15px; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: fit-content;">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo escape_html(grid_url($current_group, 1, SHUFFLE ? null : random_int(1, 999999999))); ?>"
+                       title="<?php echo SHUFFLE ? 'Turn off shuffle' : 'Shuffle'; ?>" aria-label="Shuffle" aria-pressed="<?php echo SHUFFLE ? 'true' : 'false'; ?>"
+                       style="<?php if (SHUFFLE): ?>
+                                background: linear-gradient(135deg, #0d6efd, #dc3545) !important;
+                                color: white !important;
+                                border: none !important;
+                              <?php else: ?>
+                                background: rgba(255,255,255,0.1) !important;
+                                color: rgba(255,255,255,0.9) !important;
+                                border: 1px solid rgba(255,255,255,0.2) !important;
+                              <?php endif; ?>
+                              border-radius: 10px !important;
+                              font-weight: 500;
+                              transition: all 0.3s ease;
+                              margin: 2px;
+                              padding: 0.375rem 0.75rem;
+                              font-size: 0.875rem;">
+                        <i class="fas fa-shuffle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
         
         <!-- Image Grid -->
         <div class="row g-1 g-sm-3 my-3" id="imageGrid">

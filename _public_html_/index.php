@@ -15,6 +15,25 @@ include '_partials/head.php';
 <div class="container">
 	<?php include '_partials/header.php'; ?>
 
+	<?php
+	$galleryGroups = gallery_groups();
+	$galleryFolder = array_key_first($galleryGroups);
+	$galleryPicks = $galleryGroups[$galleryFolder] ?? [];
+	shuffle($galleryPicks);
+	?>
+	<?php if ($galleryFolder !== null): ?>
+	<div class="p-4 mb-5">
+		<h2 class="mb-3"><a href="/gallery/">GALLERY <i class="fa-solid fa-angle-right"></i></a></h2>
+		<div class="gallery-strip">
+			<?php foreach (array_slice($galleryPicks, 0, 4) as $file): ?>
+			<a href="/gallery/<?php echo htmlspecialchars(gallery_page_path($galleryFolder, $file)); ?>">
+				<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="<?php echo htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)); ?>" loading="lazy">
+			</a>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<?php endif; ?>
+
     <div class="p-4 mb-5">
         <h2 class="mb-3"><a href="/notes">NOTES <i class="fa-solid fa-angle-right"></i></a></h2>
 		<div class="mb-0">
@@ -44,25 +63,6 @@ include '_partials/head.php';
             ?>
 		</div>
 	</div>
-
-	<?php
-	$galleryGroups = gallery_groups();
-	$galleryFolder = array_key_first($galleryGroups);
-	$galleryPicks = $galleryGroups[$galleryFolder] ?? [];
-	shuffle($galleryPicks);
-	?>
-	<?php if ($galleryFolder !== null): ?>
-	<div class="p-4 mb-5">
-		<h2 class="mb-3"><a href="/gallery/">GALLERY <i class="fa-solid fa-angle-right"></i></a></h2>
-		<div class="gallery-strip">
-			<?php foreach (array_slice($galleryPicks, 0, 4) as $file): ?>
-			<a href="/gallery/<?php echo htmlspecialchars(gallery_page_path($galleryFolder, $file)); ?>">
-				<img src="/gallery/<?php echo htmlspecialchars(gallery_image_path($galleryFolder, $file)); ?>" alt="<?php echo htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)); ?>" loading="lazy">
-			</a>
-			<?php endforeach; ?>
-		</div>
-	</div>
-	<?php endif; ?>
 
 	<div class="p-4 mb-4">
         <h2 class="mb-3">PROJECTS</h2>
