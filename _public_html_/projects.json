@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "id": "voximov",
+      "name": "Voximov",
+      "url": null,
+      "description": "A desktop app for recording and editing a voiceover over a video, with video audio, voice, and music on separate tracks",
+      "github_url": "https://github.com/ediril/voximov",
+      "last_updated": "2026-11-09"
+    },
+    {
+      "id": "traqen",
+      "name": "Traqen",
+      "url": null,
+      "description": "A lightweight personal tracker for active work scattered across Jira, Slack, docs, GitHub, email, and browser tabs",
+      "github_url": null,
+      "last_updated": "2026-10-25"
+    },
+    {
       "id": "wpsync",
       "name": "WPSync",
       "url": null,
@@ -13,7 +29,7 @@
       "name": "Qubotu",
       "url": "https://qubotu.com",
       "description": "A personal team of AI agents that runs locally, works on a schedule, and shares results in your browser",
-      "github_url": null,
+      "github_url": "https://github.com/ediril/qubotu",
       "last_updated": "2026-11-01"
     },
     {

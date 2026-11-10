@@ -120,6 +120,12 @@ h3 {
 	font-size: 1.05rem;
 }
 
+.site-tagline {
+	margin: 0.35rem 0 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
 .social-links {
 	margin-top: 0.65rem;
 }

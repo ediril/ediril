@@ -1,6 +1,7 @@
 	<div class="site-header position-relative mt-4">
 		<div class="site-title-block mx-4">
 			<h1 class="text-decoration-none mb-0"><a href="https://emrahdiril.com">Emrah Diril</a></h1>
+			<p class="site-tagline">Code Blacksmith, AI Whisperer, Product Doctor</p>
 			<div class="social-links d-flex gap-3">
 				<a href="http://x.com/emrahdma" title="X (Twitter)" class="text-decoration-none">𝕏</a>
 				<a href="http://linkedin.com/in/ediril" title="LinkedIn" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
