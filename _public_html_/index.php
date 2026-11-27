@@ -35,7 +35,13 @@ include '_partials/head.php';
 	<?php endif; ?>
 
     <div class="p-4 mb-5">
-        <h2 class="mb-3"><a href="/notes">NOTES <i class="fa-solid fa-angle-right"></i></a></h2>
+        <div class="section-head mb-3">
+            <h2 class="mb-0"><a href="/notes">NOTES <i class="fa-solid fa-angle-right"></i></a></h2>
+            <a class="substack-button" href="<?php echo htmlspecialchars(SUBSTACK_URL); ?>">
+                <svg class="icon-substack" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M0 0h448v63H0zm0 115h448v63H0zm0 114h448v283L224 386 0 512z"/></svg>
+                Subscribe
+            </a>
+        </div>
 		<div class="mb-0">
             <?php
             $notes = getRecentNotes(4);
@@ -62,7 +68,6 @@ include '_partials/head.php';
             }
             ?>
 		</div>
-		<p class="follow-line"><a href="<?php echo htmlspecialchars(SUBSTACK_URL); ?>">Follow my writing on Substack <i class="fa-solid fa-angle-right"></i></a></p>
 	</div>
 
 	<div class="p-4 mb-4">
