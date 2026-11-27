@@ -62,6 +62,7 @@ include '_partials/head.php';
             }
             ?>
 		</div>
+		<p class="follow-line"><a href="<?php echo htmlspecialchars(SUBSTACK_URL); ?>">Follow my writing on Substack <i class="fa-solid fa-angle-right"></i></a></p>
 	</div>
 
 	<div class="p-4 mb-4">

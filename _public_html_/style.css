@@ -144,6 +144,11 @@ h3 {
 	transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
 
+.icon-substack {
+	width: 0.8em;
+	height: 0.9em;
+}
+
 .social-links a:hover {
 	border-color: var(--green);
 	background: #17221b;
@@ -194,6 +199,17 @@ li p {
 
 .empty-state {
 	color: var(--muted);
+}
+
+.follow-line {
+	margin: 1rem 0 0;
+	padding-top: 0.85rem;
+	border-top: 1px dashed var(--border);
+	font-size: 0.92rem;
+}
+
+.follow-line i {
+	font-size: 0.8em;
 }
 
 .gallery-strip {

@@ -7,6 +7,7 @@
 				<a href="http://linkedin.com/in/ediril" title="LinkedIn" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
 				<a href="http://github.com/ediril" title="GitHub" class="text-decoration-none"><i class="fab fa-github"></i></a>
 				<a href="https://instagram.com/emrahdiril" title="Instagram" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+				<a href="<?php echo htmlspecialchars(SUBSTACK_URL); ?>" title="Substack" class="text-decoration-none"><svg class="icon-substack" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M0 0h448v63H0zm0 115h448v63H0zm0 114h448v283L224 386 0 512z"/></svg></a>
 			</div>
 		</div>
 		<img src="_img/emrah.jpg" alt="Emrah Diril" class="navbar-img rounded position-absolute top-50 end-0 translate-middle-y">

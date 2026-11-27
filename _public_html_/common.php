@@ -3,6 +3,9 @@
 // Configuration constants
 define('NOTES_EXCERPT_LENGTH', 150);
 
+// Where people can follow my writing. Linked from the header and the notes panel.
+const SUBSTACK_URL = 'https://emrahdma.substack.com';
+
 /**
  * Build a clean excerpt from WordPress post content
  * @param string $content The post content
